@@ -11,10 +11,10 @@
 	"importOrder": [
 		"^react",
 		"<THIRD_PARTY_MODULES>",
-		"^[~/](?!.*[.]css$)[./].*$",
-		"^(?!.*[.]css$)[./].*$",
-		"^(?![./]).*.css$",
-		"^[./].*.css$"
+		"^[~/](?!.*[.]scss$)[./].*$",
+		"^(?!.*[.]scss$)[./].*$",
+		"^(?![./]).*.scss$",
+		"^[./].*.scss$"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,
