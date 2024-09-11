@@ -39,5 +39,8 @@
 			"pnpm typecheck"
 		],
 		"**/*": "pnpm format"
+	},
+	"volta": {
+		"node": "20.15.0"
 	}
 }
