@@ -1,14 +1,15 @@
 {
 	"name": "rimac-challenge",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"typecheck": "bash -c tsc"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
