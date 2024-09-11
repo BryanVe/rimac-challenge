@@ -1,0 +1,5 @@
+# External folders
+node_modules
+
+# External files
+pnpm-lock.yaml
