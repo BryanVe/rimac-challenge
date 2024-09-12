@@ -6,7 +6,7 @@ import { Icon } from '~/components'
 import './style.scss'
 
 const RootLayout = () => (
-	<>
+	<div className='container'>
 		<header className='header'>
 			<nav className='header__content'>
 				<Link to='/'>
@@ -32,7 +32,7 @@ const RootLayout = () => (
 			</nav>
 		</header>
 		<Outlet />
-	</>
+	</div>
 )
 
 export default RootLayout
