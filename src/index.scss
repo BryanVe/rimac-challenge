@@ -25,3 +25,26 @@ a {
 	text-decoration: none;
 	color: unset;
 }
+
+input {
+	border: none;
+	background-color: transparent;
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		appearance: none;
+		margin: 0;
+	}
+
+	&[type='number'] {
+		appearance: textfield;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}

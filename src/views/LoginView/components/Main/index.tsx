@@ -1,5 +1,5 @@
 import { rimacLanding } from '~/assets/images'
-import { Divider, Text, Title } from '~/components'
+import { Divider, NumberInput, Text, Title } from '~/components'
 
 import { Sparkles } from './components'
 
@@ -56,6 +56,10 @@ const Main = () => {
 						Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
 						asesoría. 100% online.
 					</Text>
+					<NumberInput
+						placeholder='Celular'
+						className='login-section__form-phone'
+					/>
 				</div>
 			</div>
 			<Sparkles />

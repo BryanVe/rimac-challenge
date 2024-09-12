@@ -1,0 +1,69 @@
+$input-color: #5e6488;
+
+@mixin boxShadow($pxWidth, $color) {
+	box-shadow: 0 0 0 $pxWidth inset $color;
+}
+
+.number-input {
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__field {
+		@include boxShadow(1px, $input-color);
+		padding-block: rem(24px) rem(8px);
+		padding-inline: rem(16px);
+		border-radius: rem(8px);
+		font-size: rem(16px);
+		line-height: rem(24px);
+		transition: all 0.1s ease;
+
+		&::placeholder {
+			visibility: hidden;
+		}
+
+		&:focus-visible {
+			@include boxShadow(2px, $input-color);
+		}
+	}
+
+	&__placeholder {
+		left: rem(16px);
+		font-size: rem(14px);
+		line-height: rem(24px);
+		position: absolute;
+		pointer-events: none;
+		color: $input-color;
+		transition: all 0.1s ease;
+	}
+
+	&:has(&__field:focus-visible) &__placeholder,
+	&:has(&__field:not(:placeholder-shown)) &__placeholder {
+		transform: translateY(-50%);
+		font-size: rem(12px);
+	}
+
+	&:has(&__error) {
+		.number-input__field {
+			@include boxShadow(2px, var(--red-color));
+		}
+
+		.number-input__placeholder {
+			color: var(--red-color);
+		}
+
+		.number-input__error {
+			margin-top: rem(8px);
+			font-size: rem(13px);
+			color: var(--red-color);
+			font-weight: var(--medium-weight);
+		}
+	}
+
+	&:has(&__field:disabled) {
+		opacity: 0.6;
+	}
+}
