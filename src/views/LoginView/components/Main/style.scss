@@ -39,7 +39,7 @@
 		}
 
 		&-divider {
-			margin: rem(24px) 0;
+			margin-block: rem(24px);
 			@include desktop-hidden;
 		}
 

@@ -19,23 +19,23 @@ const Main = () => {
 				<div className='login-section__form'>
 					<div className='tag-promo'>Seguro Salud Flexible</div>
 					<div>
-						<div className='login-section__form-title'>
-							<Title
-								size={{
-									desktop: 32,
-									mobile: 28
-								}}
-								lh={{
-									desktop: 40,
-									mobile: 36
-								}}
-							>
-								Creado para ti y tu familia
-							</Title>
-						</div>
-						<div className='login-section__form-divider'>
-							<Divider color='gray' />
-						</div>
+						<Title
+							size={{
+								desktop: 32,
+								mobile: 28
+							}}
+							lh={{
+								desktop: 40,
+								mobile: 36
+							}}
+							className='login-section__form-title'
+						>
+							Creado para ti y tu familia
+						</Title>
+						<Divider
+							color='gray'
+							className='login-section__form-divider'
+						/>
 					</div>
 					<Text
 						size={14}

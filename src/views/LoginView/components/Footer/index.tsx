@@ -25,9 +25,10 @@ const Footer = () => (
 					src={rimacNegativeLogoSm}
 				/>
 			</Link>
-			<div className='footer__divider'>
-				<Divider color='blue' />
-			</div>
+			<Divider
+				color='blue'
+				className='footer__divider'
+			/>
 			<Text
 				span
 				color='white'
