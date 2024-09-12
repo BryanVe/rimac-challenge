@@ -1,0 +1,1 @@
+type DividerColor = 'gray' | 'blue'

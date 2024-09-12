@@ -1,5 +1,5 @@
 import { rimacLanding } from '~/assets/images'
-import { Title } from '~/components'
+import { Divider, Title } from '~/components'
 
 import { Sparkles } from './components'
 
@@ -33,7 +33,9 @@ const Main = () => {
 								Creado para ti y tu familia
 							</Title>
 						</div>
-						<div className='login-section__form-divider' />
+						<div className='login-section__form-divider'>
+							<Divider color='gray' />
+						</div>
 					</div>
 					<p className='login-section__form-description'>
 						Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra

@@ -1,0 +1,12 @@
+$divider-colors: 'blue', 'gray';
+
+.divider {
+	border-top: rem(1px) solid var(--black-color);
+	width: 100%;
+
+	@each $name in $divider-colors {
+		&--#{$name}-color {
+			border-top-color: var(--#{$name}-color);
+		}
+	}
+}
