@@ -9,7 +9,7 @@ const Main = () => {
 	return (
 		<main className='login-section'>
 			<div className='login-section__content'>
-				<div className='login-section__landing-image'>
+				<div className='login-section__landing-image--desktop'>
 					<img
 						draggable={false}
 						alt='Portada de RIMAC Seguros'
@@ -17,26 +17,35 @@ const Main = () => {
 					/>
 				</div>
 				<div className='login-section__form'>
-					<div className='tag-promo'>Seguro Salud Flexible</div>
-					<div>
-						<Title
-							size={{
-								desktop: 32,
-								mobile: 28
-							}}
-							lh={{
-								desktop: 40,
-								mobile: 36
-							}}
-							className='login-section__form-title'
-						>
-							Creado para ti y tu familia
-						</Title>
-						<Divider
-							color='gray'
-							className='login-section__form-divider'
-						/>
+					<div className='login-section__form-header'>
+						<div>
+							<div className='tag-promo'>Seguro Salud Flexible</div>
+							<Title
+								size={{
+									desktop: 32,
+									mobile: 28
+								}}
+								lh={{
+									desktop: 40,
+									mobile: 36
+								}}
+								className='login-section__form-title'
+							>
+								Creado para ti y tu familia
+							</Title>
+						</div>
+						<div className='login-section__landing-image--mobile'>
+							<img
+								draggable={false}
+								alt='Portada de RIMAC Seguros'
+								src={rimacLanding}
+							/>
+						</div>
 					</div>
+					<Divider
+						color='gray'
+						className='login-section__form-divider'
+					/>
 					<Text
 						size={14}
 						lh={20}

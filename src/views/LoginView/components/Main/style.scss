@@ -12,14 +12,28 @@
 	}
 
 	&__landing-image {
-		max-width: rem(480px);
-		border-radius: rem(24px);
-		overflow: hidden;
-		@include mobile-hidden;
+		&--desktop {
+			max-width: rem(480px);
+			border-radius: rem(24px);
+			overflow: hidden;
+			@include mobile-hidden;
 
-		img {
-			max-width: 100%;
-			height: auto;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		&--mobile {
+			max-width: rem(136px);
+			border-radius: rem(16px);
+			overflow: hidden;
+			@include desktop-hidden;
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 	}
 
@@ -32,6 +46,13 @@
 		@media (width <= $mobile-breakpoint) {
 			min-width: 100%;
 			max-width: 100%;
+		}
+
+		&-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(12px);
 		}
 
 		&-title {
