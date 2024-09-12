@@ -35,14 +35,7 @@
 		}
 
 		&-title {
-			font-size: rem(32px);
-			line-height: rem(40px);
 			margin-top: rem(16px);
-
-			@media (width <= $mobile-breakpoint) {
-				font-size: rem(28px);
-				line-height: rem(36px);
-			}
 		}
 
 		&-divider {

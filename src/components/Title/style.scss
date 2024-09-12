@@ -1,0 +1,29 @@
+$title-font-weights: 'thin', 'extralight', 'light', 'regular', 'medium',
+	'semibold', 'bold', 'black';
+
+$title-font-colors: 'black';
+
+.title {
+	font-family: inherit;
+	font-size: var(--desktop-size);
+	letter-spacing: var(--desktop-ls);
+	line-height: var(--desktop-lh);
+
+	@media (width <= $mobile-breakpoint) {
+		font-size: var(--mobile-size);
+		letter-spacing: var(--mobile-ls);
+		line-height: var(--mobile-lh);
+	}
+
+	@each $name in $title-font-weights {
+		&--#{$name}-weight {
+			font-weight: var(--#{$name}-weight);
+		}
+	}
+
+	@each $name in $title-font-colors {
+		&--#{$name}-color {
+			color: var(--#{$name}-color);
+		}
+	}
+}

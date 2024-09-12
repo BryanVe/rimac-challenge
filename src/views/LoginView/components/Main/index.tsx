@@ -1,4 +1,5 @@
 import { rimacLanding } from '~/assets/images'
+import { Title } from '~/components'
 
 import { Sparkles } from './components'
 
@@ -18,9 +19,20 @@ const Main = () => {
 				<div className='login-section__form'>
 					<div className='tag-promo'>Seguro Salud Flexible</div>
 					<div>
-						<h1 className='login-section__form-title'>
-							Creado para ti y tu familia
-						</h1>
+						<div className='login-section__form-title'>
+							<Title
+								size={{
+									desktop: 32,
+									mobile: 28
+								}}
+								lh={{
+									desktop: 40,
+									mobile: 36
+								}}
+							>
+								Creado para ti y tu familia
+							</Title>
+						</div>
 						<div className='login-section__form-divider' />
 					</div>
 					<p className='login-section__form-description'>
