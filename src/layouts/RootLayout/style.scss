@@ -1,0 +1,61 @@
+.header {
+	&__content {
+		height: rem(64px);
+		max-width: rem(1120px);
+		margin: 0 auto;
+		padding-inline: rem(32px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		height: rem(36px);
+
+		@media (width <= $sm-breakpoint) {
+			height: rem(32px);
+		}
+	}
+
+	&__phone {
+		display: flex;
+		gap: rem(16px);
+		align-items: center;
+
+		&-message {
+			font-size: rem(12px);
+			line-height: rem(16px);
+			color: var(--black-color);
+			letter-spacing: rem(0.2px);
+			font-weight: var(--semi-bold-weight);
+
+			@media (width <= $sm-breakpoint) {
+				display: none;
+			}
+		}
+
+		&-icon {
+			width: rem(20px);
+			height: rem(20px);
+		}
+
+		&-number {
+			font-size: rem(18px);
+			line-height: rem(20px);
+			color: var(--black-color);
+			letter-spacing: rem(0.4px);
+			font-weight: var(--bold-weight);
+			display: flex;
+			gap: rem(8px);
+			align-items: center;
+
+			@media (width <= $sm-breakpoint) {
+				font-size: rem(16px);
+			}
+		}
+
+		&:hover > &-number {
+			text-decoration: underline;
+		}
+	}
+}
