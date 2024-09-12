@@ -36,7 +36,18 @@ const RootLayout = () => (
 							name='phone'
 							className='header__phone-icon'
 						/>
-						(01) 411 6001
+						<Text
+							span
+							size={{
+								desktop: 18,
+								mobile: 16
+							}}
+							lh={20}
+							ls={0.4}
+							fw='bold'
+						>
+							(01) 411 6001
+						</Text>
 					</a>
 				</div>
 			</nav>

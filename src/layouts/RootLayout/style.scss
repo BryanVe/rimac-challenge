@@ -41,21 +41,13 @@
 		}
 
 		&-number {
-			font-size: rem(18px);
-			line-height: rem(20px);
-			letter-spacing: rem(0.4px);
-			font-weight: var(--bold-weight);
 			display: flex;
 			gap: rem(8px);
 			align-items: center;
 
-			@media (width <= $mobile-breakpoint) {
-				font-size: rem(16px);
+			&:hover > span {
+				text-decoration: underline;
 			}
-		}
-
-		&:hover > &-number {
-			text-decoration: underline;
 		}
 	}
 }
