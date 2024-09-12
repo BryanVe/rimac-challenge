@@ -27,6 +27,11 @@
 	--divider-color: #2b304e;
 }
 
+body {
+	background-color: var(--white-color);
+	color: var(--black-color);
+}
+
 a {
 	text-decoration: none;
 	color: unset;

@@ -1,4 +1,85 @@
 .login-section {
 	position: relative;
 	flex: 1;
+	display: grid;
+	place-items: center;
+
+	&__content {
+		@include container;
+		display: flex;
+		align-items: center;
+		gap: rem(128px);
+	}
+
+	&__landing-image {
+		max-width: rem(480px);
+		border-radius: rem(24px);
+		overflow: hidden;
+		@include mobile-hidden;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		min-width: 352px;
+		max-width: 352px;
+
+		@media (width <= $mobile-breakpoint) {
+			min-width: 100%;
+			max-width: 100%;
+		}
+
+		&-title {
+			font-size: rem(32px);
+			line-height: rem(40px);
+			margin-top: rem(16px);
+
+			@media (width <= $mobile-breakpoint) {
+				font-size: rem(28px);
+				line-height: rem(36px);
+			}
+		}
+
+		&-divider {
+			display: none;
+			border-top: rem(1px) solid #ccd1ee;
+			width: 100%;
+			margin: rem(24px) 0;
+
+			@media (width <= $mobile-breakpoint) {
+				display: block;
+			}
+		}
+
+		&-description {
+			font-weight: var(--medium-weight);
+			font-size: rem(14px);
+			line-height: rem(20px);
+			letter-spacing: rem(0.2px);
+			margin-top: rem(8px);
+		}
+	}
+
+	.tag-promo {
+		display: inline-block;
+		width: fit-content;
+		padding: rem(4px) rem(8px);
+		border-radius: rem(4px);
+		font-size: rem(14px);
+		font-weight: var(--bold-weight);
+		line-height: rem(16px);
+		letter-spacing: rem(0.4px);
+		background: linear-gradient(90deg, #00f4e2 0%, #00ff7f 100%);
+		color: var(--black-color);
+
+		@media (width <= $mobile-breakpoint) {
+			font-size: rem(12px);
+			padding-block: rem(2px);
+		}
+	}
 }
