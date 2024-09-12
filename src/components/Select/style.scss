@@ -1,0 +1,55 @@
+$input-color: #5e6488;
+
+@mixin boxShadow($pxWidth, $color) {
+	box-shadow: 0 0 0 $pxWidth inset $color;
+}
+
+.select {
+	position: relative;
+
+	&__icon {
+		width: rem(20px);
+		height: rem(20px);
+		position: absolute;
+		right: rem(16px);
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+
+	&__wrapper {
+		@include boxShadow(1px, $input-color);
+		width: 100%;
+		padding: rem(16px);
+		padding-inline-end: rem(36px);
+		border-radius: rem(8px);
+		font-size: rem(16px);
+		line-height: rem(24px);
+		transition: all 0.1s ease;
+
+		&:focus-visible {
+			@include boxShadow(2px, $input-color);
+		}
+	}
+
+	&:has(&__error) {
+		.number-input__field {
+			@include boxShadow(2px, var(--red-color));
+		}
+
+		.number-input__placeholder {
+			color: var(--red-color);
+		}
+
+		.number-input__error {
+			margin-top: rem(8px);
+			font-size: rem(13px);
+			color: var(--red-color);
+			font-weight: var(--medium-weight);
+		}
+	}
+
+	&:has(&__field:disabled) {
+		opacity: 0.6;
+	}
+}

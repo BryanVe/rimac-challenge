@@ -48,3 +48,17 @@ input {
 		cursor: not-allowed;
 	}
 }
+
+select {
+	appearance: none;
+	border: none;
+	background-color: transparent;
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}

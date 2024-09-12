@@ -1,5 +1,5 @@
 import { rimacLanding } from '~/assets/images'
-import { Divider, NumberInput, Text, Title } from '~/components'
+import { Divider, NumberInput, Select, Text, Title } from '~/components'
 
 import { Sparkles } from './components'
 
@@ -56,6 +56,18 @@ const Main = () => {
 						Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
 						asesoría. 100% online.
 					</Text>
+					<Select
+						options={[
+							{
+								label: 'DNI',
+								value: 'dni'
+							},
+							{
+								label: 'RUC',
+								value: 'ruc'
+							}
+						]}
+					/>
 					<NumberInput
 						placeholder='Celular'
 						className='login-section__form-phone'
