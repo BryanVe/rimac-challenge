@@ -1,4 +1,4 @@
-$sm-breakpoint: 640px;
+$mobile-breakpoint: 640px;
 
 @mixin container {
 	max-width: rem(1120px);
@@ -9,7 +9,7 @@ $sm-breakpoint: 640px;
 @mixin desktop-hidden {
 	display: none;
 
-	@media (width <= $sm-breakpoint) {
+	@media (width <= $mobile-breakpoint) {
 		display: block;
 	}
 }
@@ -17,7 +17,7 @@ $sm-breakpoint: 640px;
 @mixin mobile-hidden {
 	display: block;
 
-	@media (width <= $sm-breakpoint) {
+	@media (width <= $mobile-breakpoint) {
 		display: none;
 	}
 }
