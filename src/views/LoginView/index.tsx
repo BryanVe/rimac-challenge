@@ -1,14 +1,10 @@
-import { Footer } from './components'
+import { Footer, Main } from './components'
 
-import './style.scss'
-
-const LoginView = () => {
-	return (
-		<>
-			<main className='login-section'>Content</main>
-			<Footer />
-		</>
-	)
-}
+const LoginView = () => (
+	<>
+		<Main />
+		<Footer />
+	</>
+)
 
 export default LoginView

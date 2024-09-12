@@ -1,0 +1,29 @@
+.left-sparkle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	user-select: none;
+
+	&--desktop {
+		@include mobile-hidden;
+	}
+
+	&--mobile {
+		@include desktop-hidden;
+	}
+}
+
+.right-sparkle {
+	position: absolute;
+	top: rem(-64px);
+	right: 0;
+	user-select: none;
+
+	&--desktop {
+		@include mobile-hidden;
+	}
+
+	&--mobile {
+		@include desktop-hidden;
+	}
+}

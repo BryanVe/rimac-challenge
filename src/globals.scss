@@ -1,1 +1,23 @@
 $sm-breakpoint: 640px;
+
+@mixin container {
+	max-width: rem(1120px);
+	padding-inline: rem(24px);
+	margin: 0 auto;
+}
+
+@mixin desktop-hidden {
+	display: none;
+
+	@media (width <= $sm-breakpoint) {
+		display: block;
+	}
+}
+
+@mixin mobile-hidden {
+	display: block;
+
+	@media (width <= $sm-breakpoint) {
+		display: none;
+	}
+}
