@@ -1,7 +1,7 @@
 $input-color: #5e6488;
 
 @mixin boxShadow($pxWidth, $color) {
-	box-shadow: 0 0 0 $pxWidth inset $color;
+	box-shadow: 0 0 0 rem($pxWidth) inset $color;
 }
 
 .number-input {

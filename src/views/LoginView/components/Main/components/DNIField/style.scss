@@ -1,0 +1,19 @@
+.dni-field {
+	display: flex;
+	margin-top: rem(16px);
+
+	&__select {
+		flex: 1;
+		max-width: rem(140px);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right-width: 0;
+	}
+
+	&__number-input {
+		input {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

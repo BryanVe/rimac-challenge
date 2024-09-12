@@ -1,10 +1,12 @@
 $input-color: #5e6488;
 
-@mixin boxShadow($pxWidth, $color) {
-	box-shadow: 0 0 0 $pxWidth inset $color;
+@mixin border($pxWidth, $color) {
+	border: rem($pxWidth) solid $color;
 }
 
 .select {
+	@include border(1px, $input-color);
+	border-radius: rem(8px);
 	position: relative;
 
 	&__icon {
@@ -18,23 +20,17 @@ $input-color: #5e6488;
 	}
 
 	&__wrapper {
-		@include boxShadow(1px, $input-color);
 		width: 100%;
-		padding: rem(16px);
+		padding: rem(14px);
 		padding-inline-end: rem(36px);
-		border-radius: rem(8px);
 		font-size: rem(16px);
-		line-height: rem(24px);
+		line-height: rem(26px);
 		transition: all 0.1s ease;
-
-		&:focus-visible {
-			@include boxShadow(2px, $input-color);
-		}
 	}
 
 	&:has(&__error) {
 		.number-input__field {
-			@include boxShadow(2px, var(--red-color));
+			@include border(2px, var(--red-color));
 		}
 
 		.number-input__placeholder {
