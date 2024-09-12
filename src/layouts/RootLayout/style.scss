@@ -32,11 +32,6 @@
 		align-items: center;
 
 		&-message {
-			font-size: rem(12px);
-			line-height: rem(16px);
-			letter-spacing: rem(0.2px);
-			font-weight: var(--semi-bold-weight);
-
 			@include mobile-hidden;
 		}
 

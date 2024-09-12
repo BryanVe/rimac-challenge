@@ -1,0 +1,23 @@
+.text {
+	font-size: var(--desktop-size);
+	letter-spacing: var(--desktop-ls);
+	line-height: var(--desktop-lh);
+
+	@media (width <= $mobile-breakpoint) {
+		font-size: var(--mobile-size);
+		letter-spacing: var(--mobile-ls);
+		line-height: var(--mobile-lh);
+	}
+
+	@each $name, $value in $font-weights {
+		&--#{$name}-weight {
+			font-weight: var(--#{$name}-weight);
+		}
+	}
+
+	@each $name, $value in $colors {
+		&--#{$name}-color {
+			color: var(--#{$name}-color);
+		}
+	}
+}

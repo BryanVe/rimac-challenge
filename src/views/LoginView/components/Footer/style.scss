@@ -39,17 +39,4 @@
 		margin: rem(24px) 0;
 		@include desktop-hidden;
 	}
-
-	&__copyright {
-		color: var(--white-color);
-		font-weight: var(--regular-weight);
-		font-size: rem(14px);
-		line-height: rem(16px);
-
-		@media (width <= $mobile-breakpoint) {
-			font-size: rem(12px);
-			line-height: rem(20px);
-			letter-spacing: rem(0.1px);
-		}
-	}
 }

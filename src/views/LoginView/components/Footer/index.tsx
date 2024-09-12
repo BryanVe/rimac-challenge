@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import { rimacNegativeLogo, rimacNegativeLogoSm } from '~/assets/images'
-import { Divider } from '~/components'
+import { Divider, Text } from '~/components'
 
 import './style.scss'
 
@@ -28,9 +28,24 @@ const Footer = () => (
 			<div className='footer__divider'>
 				<Divider color='blue' />
 			</div>
-			<span className='footer__copyright'>
+			<Text
+				span
+				color='white'
+				size={{
+					desktop: 14,
+					mobile: 12
+				}}
+				lh={{
+					desktop: 16,
+					mobile: 20
+				}}
+				ls={{
+					desktop: 0,
+					mobile: 0.1
+				}}
+			>
 				© {currentYear} RIMAC Seguros y Reaseguros.
-			</span>
+			</Text>
 		</div>
 	</footer>
 )

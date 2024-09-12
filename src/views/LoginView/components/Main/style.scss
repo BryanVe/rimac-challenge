@@ -44,11 +44,9 @@
 		}
 
 		&-description {
-			font-weight: var(--medium-weight);
-			font-size: rem(14px);
-			line-height: rem(20px);
-			letter-spacing: rem(0.2px);
-			margin-top: rem(8px);
+			@media (width > $mobile-breakpoint) {
+				margin-top: rem(8px);
+			}
 		}
 	}
 

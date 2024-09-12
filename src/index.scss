@@ -1,31 +1,19 @@
 @import './theme/fonts.scss';
 
-@function rem($px) {
-	@return #{$px / 16}rem;
+:root {
+	@each $name, $value in $font-weights {
+		--#{$name}-weight: #{$value};
+	}
+
+	@each $name, $value in $colors {
+		--#{$name}-color: #{$value};
+	}
 }
 
 * {
 	padding: 0;
 	margin: 0;
 	font-family: 'BRSonoma', sans-serif;
-}
-
-:root {
-	// Font weights
-	--thin-weight: 100;
-	--extra-light-weight: 200;
-	--light-weight: 300;
-	--regular-weight: 400;
-	--medium-weight: 500;
-	--semi-bold-weight: 600;
-	--bold-weight: 700;
-	--black-weight: 800;
-
-	// Colors
-	--black-color: #03050f;
-	--white-color: #f8f9ff;
-	--gray-color: #ccd1ee;
-	--blue-color: #2b304e;
 }
 
 body {

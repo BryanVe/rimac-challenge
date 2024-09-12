@@ -1,23 +1,25 @@
+// Breakpoints
 $mobile-breakpoint: 756px;
 
-@mixin container {
-	max-width: rem(1120px);
-	padding-inline: rem(24px);
-	margin: 0 auto;
-}
+// Base font size
+$base-font-size: 16px;
 
-@mixin desktop-hidden {
-	display: none;
+// Font weights
+$font-weights: (
+	'thin': 100,
+	'extralight': 200,
+	'light': 300,
+	'regular': 400,
+	'medium': 500,
+	'semibold': 600,
+	'bold': 700,
+	'black': 800
+);
 
-	@media (width <= $mobile-breakpoint) {
-		display: block;
-	}
-}
-
-@mixin mobile-hidden {
-	display: block;
-
-	@media (width <= $mobile-breakpoint) {
-		display: none;
-	}
-}
+// Colors
+$colors: (
+	'black': #03050f,
+	'white': #f8f9ff,
+	'gray': #ccd1ee,
+	'blue': #2b304e
+);

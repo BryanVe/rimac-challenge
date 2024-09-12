@@ -1,7 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 
 import { rimacLogo } from '~/assets/images'
-import { Icon } from '~/components'
+import { Icon, Text } from '~/components'
 
 import './style.scss'
 
@@ -18,7 +18,16 @@ const RootLayout = () => (
 					/>
 				</Link>
 				<div className='header__phone'>
-					<span className='header__phone-message'>¡Compra por este medio!</span>
+					<Text
+						span
+						size={12}
+						lh={16}
+						ls={0.2}
+						fw='semibold'
+						className='header__phone-message'
+					>
+						¡Compra por este medio!
+					</Text>
 					<a
 						className='header__phone-number'
 						href='tel:+014116001'
