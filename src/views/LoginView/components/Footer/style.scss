@@ -14,6 +14,8 @@
 	}
 
 	&__logo {
+		user-select: none;
+
 		&--desktop {
 			height: rem(42px);
 
@@ -34,7 +36,7 @@
 
 	&__divider {
 		display: none;
-		border-top: rem(1px) solid #2b304e;
+		border-top: rem(1px) solid var(--divider-color);
 		width: 100%;
 		margin: rem(24px) 0;
 
