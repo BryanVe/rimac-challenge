@@ -5,16 +5,16 @@ import { getResponsiveValue } from '~/utils/style'
 import './style.scss'
 
 export interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-	c?: ColorProp
-	fw?: FontWeightProp
-	order?: TitleOrderProp
+	color?: RimacColor
+	fw?: RimacFontWeight
+	order?: RimacTitleOrder
 	size?: number | ResponsiveProp<number>
 	ls?: number | ResponsiveProp<number>
 	lh?: number | ResponsiveProp<number>
 }
 
 const Title = ({
-	c,
+	color,
 	className,
 	lh,
 	ls,
@@ -37,7 +37,7 @@ const Title = ({
 	const _className = clsx(
 		'title',
 		fw && `title--${fw}-weight`,
-		c && `title--${c}-color`,
+		color && `title--${color}-color`,
 		className
 	)
 

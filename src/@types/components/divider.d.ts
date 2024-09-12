@@ -1,1 +1,0 @@
-type DividerColor = 'gray' | 'blue'

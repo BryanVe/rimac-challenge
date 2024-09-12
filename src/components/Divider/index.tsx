@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import './style.scss'
 
 export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
-	color?: DividerColor
+	color?: RimacColor
 }
 
 const Divider = ({ color, className, ...restProps }: DividerProps) => {

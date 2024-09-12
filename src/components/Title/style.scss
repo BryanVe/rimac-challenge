@@ -1,8 +1,3 @@
-$title-font-weights: 'thin', 'extralight', 'light', 'regular', 'medium',
-	'semibold', 'bold', 'black';
-
-$title-font-colors: 'black';
-
 .title {
 	font-family: inherit;
 	font-size: var(--desktop-size);
@@ -15,13 +10,13 @@ $title-font-colors: 'black';
 		line-height: var(--mobile-lh);
 	}
 
-	@each $name in $title-font-weights {
+	@each $name, $value in $font-weights {
 		&--#{$name}-weight {
 			font-weight: var(--#{$name}-weight);
 		}
 	}
 
-	@each $name in $title-font-colors {
+	@each $name, $value in $colors {
 		&--#{$name}-color {
 			color: var(--#{$name}-color);
 		}
