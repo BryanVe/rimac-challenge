@@ -1,4 +1,4 @@
-import { Phone } from '~/assets/icons'
+import Phone from './Phone'
 
 export const icons = {
 	phone: Phone

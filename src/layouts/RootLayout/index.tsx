@@ -32,9 +32,10 @@ const RootLayout = () => (
 						className='header__phone-number'
 						href='tel:+014116001'
 					>
-						<span className='header__phone-icon'>
-							<Icon name='phone' />
-						</span>
+						<Icon
+							name='phone'
+							className='header__phone-icon'
+						/>
 						(01) 411 6001
 					</a>
 				</div>
