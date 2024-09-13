@@ -1,5 +1,5 @@
 import { rimacLanding } from '~/assets/images'
-import { Divider, NumberInput, Text, Title } from '~/components'
+import { Checkbox, Divider, NumberInput, Text, Title } from '~/components'
 
 import { DNIField, Sparkles } from './components'
 
@@ -60,6 +60,14 @@ const Main = () => {
 					<NumberInput
 						placeholder='Celular'
 						className='login-section__form-phone'
+					/>
+					<Checkbox
+						label='Acepto la Política de Privacidad'
+						className='login-section__form-privacy'
+					/>
+					<Checkbox
+						label='Acepto la Política Comunicaciones Comerciales'
+						className='login-section__form-commercial'
 					/>
 				</div>
 			</div>
