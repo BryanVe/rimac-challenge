@@ -23,16 +23,12 @@
 }
 
 @mixin desktop-hidden {
-	display: none;
-
-	@include respond-to('mobile') {
-		display: block;
+	@include respond-to('desktop') {
+		display: none;
 	}
 }
 
 @mixin mobile-hidden {
-	display: block;
-
 	@include respond-to('mobile') {
 		display: none;
 	}

@@ -1,52 +1,92 @@
 .stepper {
+	background-color: #edeffc;
+	padding-block: rem(16px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #edeffc;
-	padding-block: rem(16px);
 	gap: rem(16px);
 
-	picture {
-		display: grid;
-		place-items: center;
-		user-select: none;
-	}
+	&--desktop {
+		@include mobile-hidden;
 
-	&__step {
-		display: flex;
-		gap: rem(16px);
-
-		&-indicator {
-			width: rem(22px);
-			height: rem(22px);
-			border-radius: 50%;
+		picture {
 			display: grid;
-			font-size: rem(12px);
-			line-height: rem(16px);
-			font-weight: var(--bold-weight);
-			color: #7981b2;
-			border: rem(1px) solid #7981b2;
-			letter-spacing: rem(0.4px);
-			place-content: center;
+			place-items: center;
+			user-select: none;
 		}
 
-		&-label {
-			font-size: rem(16px);
-			line-height: rem(24px);
-			letter-spacing: rem(0.2px);
-			color: #7981b2;
-		}
+		.stepper__step {
+			display: flex;
+			gap: rem(16px);
 
-		&--active {
-			.stepper__step-indicator {
-				background-color: #4f4fff;
-				border: rem(1px) solid #4f4fff;
-				color: white;
+			&-indicator {
+				width: rem(22px);
+				height: rem(22px);
+				border-radius: 50%;
+				display: grid;
+				font-size: rem(12px);
+				line-height: rem(16px);
+				font-weight: var(--bold-weight);
+				color: #7981b2;
+				border: rem(1px) solid #7981b2;
+				letter-spacing: rem(0.4px);
+				place-content: center;
 			}
 
-			.stepper__step-label {
-				font-weight: var(--bold-weight);
+			&-label {
+				font-size: rem(16px);
+				line-height: rem(24px);
+				letter-spacing: rem(0.2px);
+				color: #7981b2;
+			}
+
+			&--active {
+				.stepper__step-indicator {
+					background-color: #4f4fff;
+					border: rem(1px) solid #4f4fff;
+					color: white;
+				}
+
+				.stepper__step-label {
+					font-weight: var(--bold-weight);
+					color: #141938;
+				}
+			}
+		}
+	}
+
+	&--mobile {
+		padding-inline: rem(24px);
+		@include desktop-hidden;
+
+		.stepper {
+			&__back-button {
+				width: rem(20px);
+				height: rem(20px);
+				color: #a9afd9;
+			}
+
+			&__counter {
+				font-weight: var(--black-weight);
+				text-transform: uppercase;
+				font-size: rem(10px);
+				line-height: rem(16px);
+				letter-spacing: rem(0.8px);
 				color: #141938;
+			}
+
+			&__progress {
+				flex: 1;
+				height: rem(6px);
+				border-radius: rem(20px);
+				background-color: #d7dbf5;
+
+				&-bar {
+					height: rem(6px);
+					border-radius: rem(20px);
+					width: var(--progress-bar-width);
+					background-color: #4f4fff;
+				}
 			}
 		}
 	}
