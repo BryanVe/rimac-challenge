@@ -19,13 +19,17 @@
 		height: rem(20px);
 		border: rem(1px) solid #0a051e;
 		border-radius: rem(4px);
-		transition: border-color 0.1s;
 	}
 
 	&__text {
 		font-size: rem(12px);
 		line-height: rem(20px);
 		letter-spacing: rem(0.1px);
+	}
+
+	&:has(&__input:focus-visible) &__icon {
+		outline: rem(2px) solid var(--black-color);
+		outline-offset: rem(1px);
 	}
 
 	&__input:checked + .checkbox__label .checkbox__icon {

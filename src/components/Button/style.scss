@@ -83,7 +83,7 @@
 		color: var(--black-color);
 	}
 
-	@media (width <= $mobile-breakpoint) {
+	@include respond-to('mobile') {
 		padding: rem(18px) rem(40px);
 		font-size: rem(18px);
 		line-height: rem(20px);

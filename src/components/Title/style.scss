@@ -4,7 +4,7 @@
 	letter-spacing: var(--desktop-ls);
 	line-height: var(--desktop-lh);
 
-	@media (width <= $mobile-breakpoint) {
+	@include respond-to('mobile') {
 		font-size: var(--mobile-size);
 		letter-spacing: var(--mobile-ls);
 		line-height: var(--mobile-lh);

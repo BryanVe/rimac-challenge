@@ -39,6 +39,8 @@
 	}
 
 	&__form {
+		display: flex;
+		flex-direction: column;
 		min-width: 352px;
 		max-width: 352px;
 
@@ -73,16 +75,22 @@
 		}
 
 		&-privacy-checkbox {
+			display: inline-flex;
 			margin-top: rem(24px);
 		}
 
 		&-commercial-checkbox {
+			display: inline-flex;
 			margin-top: rem(12px);
 		}
 
 		&-terms-link {
-			display: inline-block;
+			display: inline-flex;
 			margin-top: rem(12px);
+
+			&:active {
+				opacity: 0.8;
+			}
 
 			.text {
 				text-decoration: underline;
