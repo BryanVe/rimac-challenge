@@ -25,6 +25,7 @@ const Stepper = ({ data }: StepperProps) => {
 	const { pathname } = useLocation()
 	const currentIndex = data.findIndex(step => step.path === pathname)
 	const currentPercentage = `${((currentIndex + 1) / data.length) * 100}%`
+	const isFirstIndex = currentIndex === 0
 
 	const progressBarStyle: CSSVariables = {
 		'--progress-bar-width': currentPercentage
@@ -67,10 +68,12 @@ const Stepper = ({ data }: StepperProps) => {
 				})}
 			</div>
 			<div className='stepper stepper--mobile'>
-				<Icon
-					name='caretCircleLeft'
+				<button
+					disabled={isFirstIndex}
 					className='stepper__back-button'
-				/>
+				>
+					<Icon name='caretCircleLeft' />
+				</button>
 				<div className='stepper__counter'>
 					Paso {currentIndex + 1} de {data.length}
 				</div>

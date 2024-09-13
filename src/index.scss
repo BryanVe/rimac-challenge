@@ -64,3 +64,13 @@ select {
 		cursor: not-allowed;
 	}
 }
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
