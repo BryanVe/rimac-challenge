@@ -27,6 +27,7 @@ $input-color: #5e6488;
 		font-size: rem(16px);
 		line-height: rem(26px);
 		transition: all 0.1s ease;
+		cursor: pointer;
 	}
 
 	&:has(&__error) {

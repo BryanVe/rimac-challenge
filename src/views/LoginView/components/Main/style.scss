@@ -81,6 +81,15 @@
 		&-commercial {
 			margin-top: rem(12px);
 		}
+
+		&-terms {
+			margin-top: rem(12px);
+			width: fit-content;
+
+			span {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	.tag-promo {

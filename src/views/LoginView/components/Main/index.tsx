@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { rimacLanding } from '~/assets/images'
 import { Checkbox, Divider, NumberInput, Text, Title } from '~/components'
 
@@ -69,6 +71,20 @@ const Main = () => {
 						label='Acepto la Política Comunicaciones Comerciales'
 						className='login-section__form-commercial'
 					/>
+					<Link
+						to='#'
+						className='login-section__form-terms'
+					>
+						<Text
+							span
+							size={12}
+							lh={20}
+							ls={0.1}
+							fw='semibold'
+						>
+							Aplican Términos y Condiciones.
+						</Text>
+					</Link>
 				</div>
 			</div>
 			<Sparkles />
