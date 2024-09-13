@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { RootLayout } from './layouts'
-import { LoginView } from './views'
+import { RootLayout, StepperLayout } from './layouts'
+import { LoginView, PlansView } from './views'
 
 const router = createBrowserRouter([
 	{
@@ -10,6 +10,15 @@ const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <LoginView />
+			},
+			{
+				element: <StepperLayout />,
+				children: [
+					{
+						path: '/plans',
+						element: <PlansView />
+					}
+				]
 			}
 		]
 	}

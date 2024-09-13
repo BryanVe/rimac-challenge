@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-block: rem(64px);
+	padding-block: rem($header-height);
 
 	@include respond-to('mobile') {
 		padding-bottom: rem(96px);
