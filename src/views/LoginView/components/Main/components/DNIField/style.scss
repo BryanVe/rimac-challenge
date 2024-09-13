@@ -13,7 +13,7 @@
 	&__number-input {
 		flex: 1;
 
-		input {
+		.number-input__field {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}

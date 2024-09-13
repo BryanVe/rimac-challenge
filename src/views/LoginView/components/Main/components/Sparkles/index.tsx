@@ -4,38 +4,36 @@ import {
 	rightSparkleDesktop,
 	rightSparkleMobile
 } from '~/assets/images'
+import { mobileBreakpoint } from '~/theme/globals'
 
 import './style.scss'
 
-const leftSparkleAlt = 'Desenfoque izquierdo'
-const rightSparkleAlt = 'Desenfoque derecho'
-
 const Sparkles = () => (
 	<>
-		<img
-			draggable={false}
-			alt={leftSparkleAlt}
-			src={leftSparkleDesktop}
-			className='left-sparkle left-sparkle--desktop'
-		/>
-		<img
-			draggable={false}
-			alt={rightSparkleAlt}
-			src={rightSparkleDesktop}
-			className='right-sparkle right-sparkle--desktop'
-		/>
-		<img
-			draggable={false}
-			alt={leftSparkleAlt}
-			src={leftSparkleMobile}
-			className='left-sparkle left-sparkle--mobile'
-		/>
-		<img
-			draggable={false}
-			alt={rightSparkleAlt}
-			src={rightSparkleMobile}
-			className='right-sparkle right-sparkle--mobile'
-		/>
+		<picture>
+			<source
+				media={`(width <= ${mobileBreakpoint}px)`}
+				srcSet={leftSparkleMobile}
+			/>
+			<img
+				draggable={false}
+				alt='Desenfoque izquierdo'
+				src={leftSparkleDesktop}
+				className='left-sparkle'
+			/>
+		</picture>
+		<picture>
+			<source
+				media={`(width <= ${mobileBreakpoint}px)`}
+				srcSet={rightSparkleMobile}
+			/>
+			<img
+				draggable={false}
+				alt='Desenfoque derecho'
+				src={rightSparkleDesktop}
+				className='right-sparkle'
+			/>
+		</picture>
 	</>
 )
 

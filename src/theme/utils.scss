@@ -10,16 +10,22 @@
 	margin: 0 auto;
 }
 
-@mixin on-mobile {
-	@media (width <= $mobile-breakpoint) {
-		@content;
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == 'mobile' {
+		@media (width <= $mobile-breakpoint) {
+			@content;
+		}
+	} @else if $breakpoint == 'desktop' {
+		@media (width > $mobile-breakpoint) {
+			@content;
+		}
 	}
 }
 
 @mixin desktop-hidden {
 	display: none;
 
-	@include on-mobile {
+	@include respond-to('mobile') {
 		display: block;
 	}
 }
@@ -27,7 +33,7 @@
 @mixin mobile-hidden {
 	display: block;
 
-	@include on-mobile {
+	@include respond-to('mobile') {
 		display: none;
 	}
 }

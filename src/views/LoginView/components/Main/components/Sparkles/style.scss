@@ -4,14 +4,6 @@
 	left: 0;
 	user-select: none;
 	z-index: -1;
-
-	&--desktop {
-		@include mobile-hidden;
-	}
-
-	&--mobile {
-		@include desktop-hidden;
-	}
 }
 
 .right-sparkle {
@@ -20,12 +12,4 @@
 	right: 0;
 	user-select: none;
 	z-index: -1;
-
-	&--desktop {
-		@include mobile-hidden;
-	}
-
-	&--mobile {
-		@include desktop-hidden;
-	}
 }
