@@ -1,4 +1,1 @@
-export const generateId = () => {
-	const [firstString, secondString] = crypto.randomUUID().split('-')
-	return `${firstString}${secondString}`
-}
+export const generateId = () => Math.random().toString(16).slice(2)

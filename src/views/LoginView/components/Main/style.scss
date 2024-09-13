@@ -4,6 +4,10 @@
 	display: grid;
 	place-items: center;
 
+	@media (width <= $mobile-breakpoint) {
+		padding-block: rem(64px) rem(96px);
+	}
+
 	&__content {
 		@include container;
 		display: flex;
@@ -89,6 +93,10 @@
 			span {
 				text-decoration: underline;
 			}
+		}
+
+		&-quote {
+			margin-top: rem(24px);
 		}
 	}
 

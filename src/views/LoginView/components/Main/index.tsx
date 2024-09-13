@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom'
 
 import { rimacLanding } from '~/assets/images'
-import { Checkbox, Divider, NumberInput, Text, Title } from '~/components'
+import {
+	Button,
+	Checkbox,
+	Divider,
+	NumberInput,
+	Text,
+	Title
+} from '~/components'
 
 import { DNIField, Sparkles } from './components'
 
@@ -85,6 +92,7 @@ const Main = () => {
 							Aplican Términos y Condiciones.
 						</Text>
 					</Link>
+					<Button className='login-section__form-quote'>Cotiza aquí</Button>
 				</div>
 			</div>
 			<Sparkles />
