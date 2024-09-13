@@ -8,6 +8,7 @@ $input-color: #5e6488;
 	@include border(1px, $input-color);
 	border-radius: rem(8px);
 	position: relative;
+	box-sizing: border-box;
 
 	&__icon {
 		width: rem(20px);

@@ -1,5 +1,5 @@
 import { rimacLanding } from '~/assets/images'
-import { Divider, Text, Title } from '~/components'
+import { Divider, NumberInput, Text, Title } from '~/components'
 
 import { DNIField, Sparkles } from './components'
 
@@ -57,6 +57,10 @@ const Main = () => {
 						asesoría. 100% online.
 					</Text>
 					<DNIField />
+					<NumberInput
+						placeholder='Celular'
+						className='login-section__form-phone'
+					/>
 				</div>
 			</div>
 			<Sparkles />

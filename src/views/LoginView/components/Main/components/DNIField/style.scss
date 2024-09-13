@@ -1,6 +1,6 @@
 .dni-field {
 	display: flex;
-	margin-top: rem(16px);
+	margin-top: rem(24px);
 
 	&__select {
 		flex: 1;
@@ -11,6 +11,8 @@
 	}
 
 	&__number-input {
+		flex: 1;
+
 		input {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
