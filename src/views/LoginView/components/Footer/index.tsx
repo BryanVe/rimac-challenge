@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 
-import { rimacNegativeLogo, rimacNegativeLogoSm } from '~/assets/images'
+import {
+	rimacNegativeLogoDesktop,
+	rimacNegativeLogoMobile
+} from '~/assets/images'
 import { Divider, Text } from '~/components'
+import { mobileBreakpoint } from '~/theme/globals'
 
 import './style.scss'
 
@@ -12,18 +16,18 @@ const Footer = () => (
 	<footer className='footer'>
 		<div className='footer__content'>
 			<Link to='/'>
-				<img
-					draggable={false}
-					className='footer__logo footer__logo--desktop'
-					alt={rimacLogoAlt}
-					src={rimacNegativeLogo}
-				/>
-				<img
-					draggable={false}
-					className='footer__logo footer__logo--mobile'
-					alt={rimacLogoAlt}
-					src={rimacNegativeLogoSm}
-				/>
+				<picture>
+					<source
+						media={`(width <= ${mobileBreakpoint}px)`}
+						srcSet={rimacNegativeLogoMobile}
+					/>
+					<img
+						draggable={false}
+						className='footer__logo'
+						alt={rimacLogoAlt}
+						src={rimacNegativeLogoDesktop}
+					/>
+				</picture>
 			</Link>
 			<Divider
 				color='blue'

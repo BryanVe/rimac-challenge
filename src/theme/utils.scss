@@ -10,10 +10,16 @@
 	margin: 0 auto;
 }
 
+@mixin on-mobile {
+	@media (width <= $mobile-breakpoint) {
+		@content;
+	}
+}
+
 @mixin desktop-hidden {
 	display: none;
 
-	@media (width <= $mobile-breakpoint) {
+	@include on-mobile {
 		display: block;
 	}
 }
@@ -21,7 +27,7 @@
 @mixin mobile-hidden {
 	display: block;
 
-	@media (width <= $mobile-breakpoint) {
+	@include on-mobile {
 		display: none;
 	}
 }

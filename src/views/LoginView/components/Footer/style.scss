@@ -1,3 +1,6 @@
+$logo-height-desktop: rem(42px);
+$logo-height-mobile: rem(20px);
+
 .footer {
 	background-color: var(--black-color);
 
@@ -8,29 +11,17 @@
 		justify-content: space-between;
 		align-items: center;
 
-		@media (width <= $mobile-breakpoint) {
+		@include on-mobile {
 			flex-direction: column;
 		}
 	}
 
 	&__logo {
 		user-select: none;
+		height: $logo-height-desktop;
 
-		&--desktop {
-			height: rem(42px);
-
-			@media (width <= $mobile-breakpoint) {
-				display: none;
-			}
-		}
-
-		&--mobile {
-			height: rem(20px);
-			display: none;
-
-			@media (width <= $mobile-breakpoint) {
-				display: block;
-			}
+		@include on-mobile {
+			height: $logo-height-mobile;
 		}
 	}
 
