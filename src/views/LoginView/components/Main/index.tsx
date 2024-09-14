@@ -61,7 +61,7 @@ const Main = () => {
 						</div>
 					</div>
 					<Divider
-						color='gray'
+						color='darkblue-300'
 						className='login-section__form-divider'
 					/>
 					<Text

@@ -30,7 +30,7 @@ const Footer = () => (
 				</picture>
 			</Link>
 			<Divider
-				color='blue'
+				color='darkblue-700'
 				className='footer__divider'
 			/>
 			<Text

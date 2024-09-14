@@ -9,7 +9,7 @@
 	}
 
 	@each $name, $value in $colors {
-		--#{$name}-color: #{$value};
+		--#{$name}: #{$value};
 	}
 }
 
@@ -19,8 +19,8 @@
 }
 
 body {
-	background-color: var(--white-color);
-	color: var(--black-color);
+	background-color: var(--darkblue-50);
+	color: var(--darkblue-900);
 }
 
 a {

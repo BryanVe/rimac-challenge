@@ -6,6 +6,7 @@ const PlansView = () => {
 	return (
 		<div className='plans-view'>
 			<Title
+				color='darkblue-800'
 				order={2}
 				size={{
 					desktop: 40,
@@ -24,6 +25,7 @@ const PlansView = () => {
 				Rocío ¿Para quién deseas cotizar?
 			</Title>
 			<Text
+				color='darkblue-800'
 				size={16}
 				lh={28}
 				ls={0.1}

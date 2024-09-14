@@ -17,7 +17,7 @@
 
 	@each $name, $value in $colors {
 		&--#{$name}-color {
-			color: var(--#{$name}-color);
+			color: var(--#{$name});
 		}
 	}
 }

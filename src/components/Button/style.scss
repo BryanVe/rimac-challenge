@@ -1,3 +1,5 @@
+$red: #ff1c44;
+
 .button {
 	position: relative;
 	box-sizing: border-box;
@@ -7,8 +9,8 @@
 	letter-spacing: rem(0.4px);
 	width: fit-content;
 	border: none;
-	background-color: var(--black-color);
-	color: white;
+	background-color: var(--darkblue-900);
+	color: var(--white);
 	font-weight: var(--bold-weight);
 	border-radius: rem(40px);
 	transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,11 +23,24 @@
 		width: 56px;
 		height: 26.9px;
 		background:
-			radial-gradient(circle closest-side, var(--black-color) 90%, #0000) 0% 50%,
-			radial-gradient(circle closest-side, var(--black-color) 90%, #0000) 50%
-				50%,
-			radial-gradient(circle closest-side, var(--black-color) 90%, #0000) 100%
-				50%;
+			radial-gradient(
+					circle closest-side,
+					var(--darkblue-500) 90%,
+					var(--darkblue-950)
+				)
+				0% 50%,
+			radial-gradient(
+					circle closest-side,
+					var(--darkblue-500) 90%,
+					var(--darkblue-950)
+				)
+				50% 50%,
+			radial-gradient(
+					circle closest-side,
+					var(--darkblue-500) 90%,
+					var(--darkblue-950)
+				)
+				100% 50%;
 		background-size: calc(100% / 3) 13.4px;
 		background-repeat: no-repeat;
 		animation: loader-animation 1s infinite linear;
@@ -68,7 +83,7 @@
 	}
 
 	&:focus-visible {
-		outline: rem(2px) solid var(--black-color);
+		outline: rem(2px) solid var(--darkblue-900);
 		outline-offset: rem(1px);
 	}
 
@@ -79,8 +94,8 @@
 	&:disabled {
 		cursor: not-allowed;
 		transform: unset;
-		background-color: var(--gray-color);
-		color: var(--black-color);
+		background-color: var(--darkblue-200);
+		color: var(--darkblue-500);
 	}
 
 	@include respond-to('mobile') {

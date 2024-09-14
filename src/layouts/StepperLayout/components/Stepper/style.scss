@@ -4,7 +4,7 @@
 	align-items: center;
 	gap: rem(16px);
 	padding-block: rem(16px);
-	background-color: #edeffc;
+	background-color: var(--darkblue-100);
 
 	&--desktop {
 		@include mobile-hidden;
@@ -27,8 +27,8 @@
 				font-size: rem(12px);
 				line-height: rem(16px);
 				font-weight: var(--bold-weight);
-				color: #7981b2;
-				border: rem(1px) solid #7981b2;
+				color: var(--darkblue-500);
+				border: rem(1px) solid var(--darkblue-500);
 				letter-spacing: rem(0.4px);
 				place-content: center;
 			}
@@ -37,19 +37,19 @@
 				font-size: rem(16px);
 				line-height: rem(24px);
 				letter-spacing: rem(0.2px);
-				color: #7981b2;
+				color: var(--darkblue-500);
 			}
 
 			&--active {
 				.stepper__step-indicator {
-					background-color: #4f4fff;
-					border: rem(1px) solid #4f4fff;
-					color: white;
+					background-color: var(--violet);
+					border: rem(1px) solid var(--violet);
+					color: var(--white);
 				}
 
 				.stepper__step-label {
 					font-weight: var(--bold-weight);
-					color: #141938;
+					color: var(--darkblue-800);
 				}
 			}
 		}
@@ -66,7 +66,7 @@
 				font-size: rem(10px);
 				line-height: rem(16px);
 				letter-spacing: rem(0.8px);
-				color: #141938;
+				color: var(--darkblue-800);
 			}
 
 			&__progress {
@@ -76,7 +76,7 @@
 				position: relative;
 				height: $progress-height;
 				border-radius: $progress-radius;
-				background-color: #d7dbf5;
+				background-color: var(--darkblue-200);
 
 				&::after {
 					content: '';
@@ -84,7 +84,7 @@
 					width: var(--progress-bar-width);
 					height: $progress-height;
 					border-radius: $progress-radius;
-					background-color: #4f4fff;
+					background-color: var(--violet);
 				}
 			}
 		}

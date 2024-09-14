@@ -17,7 +17,7 @@
 		place-items: center;
 		width: rem(20px);
 		height: rem(20px);
-		border: rem(1px) solid #0a051e;
+		border: rem(1px) solid var(--darkblue-950);
 		border-radius: rem(4px);
 	}
 
@@ -28,13 +28,13 @@
 	}
 
 	&:has(&__input:focus-visible) &__icon {
-		outline: rem(2px) solid var(--black-color);
+		outline: rem(2px) solid var(--darkblue-900);
 		outline-offset: rem(1px);
 	}
 
 	&__input:checked + .checkbox__label .checkbox__icon {
-		background-color: #0a051e;
-		border-color: #0a051e;
+		background-color: var(--darkblue-950);
+		border-color: var(--darkblue-950);
 	}
 
 	&__input:disabled + .checkbox__label {
@@ -45,18 +45,18 @@
 	&:has(&__error) {
 		.checkbox__input {
 			& + .checkbox__label {
-				color: var(--red-color);
+				color: var(--danger);
 			}
 
 			& + .checkbox__label .checkbox__icon {
-				background-color: var(--red-color);
-				border-color: var(--red-color);
+				background-color: var(--danger);
+				border-color: var(--danger);
 			}
 		}
 		.checkbox__error {
 			margin-top: rem(8px);
 			font-size: rem(13px);
-			color: var(--red-color);
+			color: var(--danger);
 			font-weight: var(--medium-weight);
 		}
 	}

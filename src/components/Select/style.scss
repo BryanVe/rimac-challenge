@@ -1,4 +1,4 @@
-$input-color: #5e6488;
+$input-color: var(--darkblue-600);
 
 @mixin border($pxWidth, $color) {
 	border: rem($pxWidth) solid $color;
@@ -32,17 +32,17 @@ $input-color: #5e6488;
 
 	&:has(&__error) {
 		.number-input__field {
-			@include border(2px, var(--red-color));
+			@include border(2px, var(--danger));
 		}
 
 		.number-input__placeholder {
-			color: var(--red-color);
+			color: var(--danger);
 		}
 
 		.number-input__error {
 			margin-top: rem(8px);
 			font-size: rem(13px);
-			color: var(--red-color);
+			color: var(--danger);
 			font-weight: var(--medium-weight);
 		}
 	}
