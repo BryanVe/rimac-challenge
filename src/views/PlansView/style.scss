@@ -1,0 +1,31 @@
+.plans-view {
+	$title-width: rem(544px);
+	$title-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(8px);
+
+	&__title {
+		max-width: $title-width;
+		text-align: $title-align;
+	}
+
+	&__description {
+		max-width: $title-width;
+		text-align: $title-align;
+	}
+
+	@include respond-to('mobile') {
+		$title-align: left;
+		align-items: flex-start;
+
+		&__title {
+			text-align: $title-align;
+		}
+
+		&__description {
+			text-align: $title-align;
+		}
+	}
+}
