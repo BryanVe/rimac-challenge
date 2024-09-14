@@ -20,7 +20,7 @@ const StepperLayout = () => {
 	const { pathname } = useLocation()
 	const currentStepIndex = steps.findIndex(step => step.path === pathname)
 	const isFirstStep = currentStepIndex === 0
-	const previousPath = isFirstStep ? '/' : steps[currentStepIndex].path
+	const previousPath = isFirstStep ? '/' : steps[currentStepIndex - 1].path
 
 	return (
 		<div className='stepper-layout'>

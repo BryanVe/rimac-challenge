@@ -20,7 +20,7 @@ const Stepper = ({ currentStepIndex, steps }: StepperProps) => {
 	const currentPercentage = `${((currentStepIndex + 1) / steps.length) * 100}%`
 	const currentStep = steps[currentStepIndex]
 	const isFirstStep = currentStepIndex === 0
-	const previousPath = isFirstStep ? '/' : steps[currentStepIndex].path
+	const previousPath = isFirstStep ? '/' : steps[currentStepIndex - 1].path
 
 	const progressBarStyle: StyleProp = {
 		'--progress-bar-width': currentPercentage

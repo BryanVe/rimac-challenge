@@ -4,6 +4,7 @@ import Check from './Check'
 import Phone from './Phone'
 import ProtectMyself from './ProtectMyself'
 import ProtectSomeone from './ProtectSomeone'
+import Users from './Users'
 
 export const icons = {
 	phone: Phone,
@@ -11,5 +12,6 @@ export const icons = {
 	check: Check,
 	caretCircleLeft: CaretCircleLeft,
 	protectSomeone: ProtectSomeone,
-	protectMyself: ProtectMyself
+	protectMyself: ProtectMyself,
+	users: Users
 } as const

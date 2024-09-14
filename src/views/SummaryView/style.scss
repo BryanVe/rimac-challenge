@@ -1,0 +1,43 @@
+.summary-view {
+	font-family: Lato, sans-serif;
+
+	&__breakdown-card {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16px);
+		padding: rem(24px) rem(32px);
+		margin-top: rem(48px);
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			gap: rem(8px);
+
+			&__title {
+				text-transform: uppercase;
+			}
+
+			&__user-data {
+				display: flex;
+				gap: rem(12px);
+				align-items: center;
+
+				&__icon {
+					$icon-size: rem(24px);
+					width: $icon-size;
+					height: $icon-size;
+				}
+			}
+		}
+
+		&__info-section {
+			display: flex;
+			flex-direction: column;
+			gap: rem(4px);
+		}
+
+		@include respond-to('mobile') {
+			margin-top: rem(40px);
+		}
+	}
+}
