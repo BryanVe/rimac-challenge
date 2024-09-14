@@ -1,4 +1,19 @@
 .stepper-layout {
 	font-family: Lato, sans-serif;
 	padding-top: $header-height;
+
+	&__container {
+		width: 100%;
+		max-width: rem(928px);
+		margin: 0 auto;
+	}
+
+	&__content {
+		padding: rem(40px) rem(24px);
+	}
+
+	&__back-button {
+		margin-bottom: rem(56px);
+		@include mobile-hidden;
+	}
 }

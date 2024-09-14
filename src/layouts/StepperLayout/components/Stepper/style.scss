@@ -1,17 +1,16 @@
 .stepper {
-	background-color: #edeffc;
-	padding-block: rem(16px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: rem(16px);
+	padding-block: rem(16px);
+	background-color: #edeffc;
 
 	&--desktop {
 		@include mobile-hidden;
 
 		picture {
 			display: grid;
-			place-items: center;
 			user-select: none;
 		}
 
@@ -20,8 +19,9 @@
 			gap: rem(16px);
 
 			&-indicator {
-				width: rem(22px);
-				height: rem(22px);
+				$indicator-size: rem(22px);
+				width: $indicator-size;
+				height: $indicator-size;
 				border-radius: 50%;
 				display: grid;
 				font-size: rem(12px);
@@ -60,16 +60,6 @@
 		@include desktop-hidden;
 
 		.stepper {
-			&__back-button {
-				width: rem(24px);
-				height: rem(24px);
-				color: #4f4fff;
-
-				&:disabled {
-					color: #a9afd9;
-				}
-			}
-
 			&__counter {
 				font-weight: var(--black-weight);
 				text-transform: uppercase;
@@ -80,15 +70,20 @@
 			}
 
 			&__progress {
+				$progress-height: rem(6px);
+				$progress-radius: rem(20px);
 				flex: 1;
-				height: rem(6px);
-				border-radius: rem(20px);
+				position: relative;
+				height: $progress-height;
+				border-radius: $progress-radius;
 				background-color: #d7dbf5;
 
-				&-bar {
-					height: rem(6px);
-					border-radius: rem(20px);
+				&::after {
+					content: '';
+					position: absolute;
 					width: var(--progress-bar-width);
+					height: $progress-height;
+					border-radius: $progress-radius;
 					background-color: #4f4fff;
 				}
 			}

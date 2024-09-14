@@ -1,14 +1,8 @@
 import { Fragment } from 'react'
-import { useLocation } from 'react-router-dom'
 
-import {
-	stepperConnectorActive,
-	stepperConnectorInactive
-} from '~/assets/images'
-import { Icon } from '~/components'
-import { mobileBreakpoint } from '~/theme/globals'
-
-import Step from '../Step'
+import BackButton from '../BackButton'
+import Connector from './Connector'
+import Step from './Step'
 
 import './style.scss'
 
@@ -18,71 +12,49 @@ type Step = {
 }
 
 type StepperProps = {
-	data: Step[]
+	steps: Step[]
+	currentStepIndex: number
 }
 
-const Stepper = ({ data }: StepperProps) => {
-	const { pathname } = useLocation()
-	const currentIndex = data.findIndex(step => step.path === pathname)
-	const currentPercentage = `${((currentIndex + 1) / data.length) * 100}%`
-	const isFirstIndex = currentIndex === 0
+const Stepper = ({ currentStepIndex, steps }: StepperProps) => {
+	const currentPercentage = `${((currentStepIndex + 1) / steps.length) * 100}%`
+	const currentStep = steps[currentStepIndex]
+	const isFirstStep = currentStepIndex === 0
+	const previousPath = isFirstStep ? '/' : steps[currentStepIndex].path
 
-	const progressBarStyle: CSSVariables = {
+	const progressBarStyle: StyleProp = {
 		'--progress-bar-width': currentPercentage
 	}
 
 	return (
 		<>
 			<div className='stepper stepper--desktop'>
-				{data.map(({ path, label }, index) => {
-					const isActive = pathname === path
-					const isLast = index === data.length - 1
-					const isBeforeActive = currentIndex > index
+				{steps.map(({ path, label }, stepIndex) => {
+					const isCurrentStep = currentStep.path === path
+					const isBeforeCurrentStep = currentStepIndex > stepIndex
+					const isLastStep = stepIndex === steps.length - 1
 
 					return (
 						<Fragment key={path}>
 							<Step
-								index={index}
-								isActive={isActive}
+								index={stepIndex}
+								isActive={isCurrentStep}
 								label={label}
 							/>
-							{!isLast && (
-								<picture>
-									<source
-										media={`(width > ${mobileBreakpoint}px)`}
-										srcSet={
-											isBeforeActive
-												? stepperConnectorInactive
-												: stepperConnectorActive
-										}
-									/>
-									<img
-										draggable={false}
-										className='stepper__connector'
-										alt='Conector del pasos'
-									/>
-								</picture>
-							)}
+							{!isLastStep && <Connector isActive={!isBeforeCurrentStep} />}
 						</Fragment>
 					)
 				})}
 			</div>
 			<div className='stepper stepper--mobile'>
-				<button
-					disabled={isFirstIndex}
-					className='stepper__back-button'
-				>
-					<Icon name='caretCircleLeft' />
-				</button>
+				<BackButton previousPath={previousPath} />
 				<div className='stepper__counter'>
-					Paso {currentIndex + 1} de {data.length}
+					Paso {currentStepIndex + 1} de {steps.length}
 				</div>
-				<div className='stepper__progress'>
-					<div
-						className='stepper__progress-bar'
-						style={progressBarStyle}
-					/>
-				</div>
+				<div
+					className='stepper__progress'
+					style={progressBarStyle}
+				/>
 			</div>
 		</>
 	)
