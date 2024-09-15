@@ -1,0 +1,67 @@
+.login-form {
+	display: flex;
+	flex-direction: column;
+
+	.id-input {
+		display: flex;
+
+		&__select {
+			max-width: rem(140px);
+
+			.select__field {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-right-width: 0;
+			}
+		}
+
+		&__number-input {
+			flex: 1;
+
+			.number-input__wrapper__field {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
+
+	.phone-input {
+		margin-top: rem(16px);
+	}
+
+	.privacy-checkbox {
+		width: fit-content;
+		margin-top: rem(24px);
+	}
+
+	.commercial-checkbox {
+		width: fit-content;
+		margin-top: rem(12px);
+	}
+
+	.terms-link {
+		width: fit-content;
+		margin-top: rem(12px);
+
+		&:active {
+			opacity: 0.8;
+		}
+
+		.text {
+			text-decoration: underline;
+		}
+	}
+
+	.quote-button {
+		margin-top: rem(24px);
+
+		&--desktop {
+			width: fit-content;
+			@include mobile-hidden;
+		}
+
+		&--mobile {
+			@include desktop-hidden;
+		}
+	}
+}

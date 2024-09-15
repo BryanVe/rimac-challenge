@@ -13,7 +13,7 @@ const RootLayout = () => (
 				<Link to='/'>
 					<Logo
 						name='rimacRegular'
-						className='root-layout__header__content__rimac-logo'
+						className='rimac-logo'
 					/>
 				</Link>
 				<PhoneSection />

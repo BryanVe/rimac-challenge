@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-import { Button, Checkbox, NumberInput, Text } from '~/components'
+import { Button, Checkbox, NumberInput, Select, Text } from '~/components'
 
-import { IDInput } from './components'
+import './style.scss'
 
 const LoginForm = () => {
 	const navigate = useNavigate()
@@ -12,23 +12,41 @@ const LoginForm = () => {
 	}
 
 	return (
-		<form className='main__content__right-section__login-form'>
-			<IDInput />
+		<form className='login-form'>
+			<div className='id-input'>
+				<Select
+					options={[
+						{
+							label: 'DNI',
+							value: 'dni'
+						},
+						{
+							label: 'RUC',
+							value: 'ruc'
+						}
+					]}
+					className='id-input__select'
+				/>
+				<NumberInput
+					placeholder='Nro. de documento'
+					className='id-input__number-input'
+				/>
+			</div>
 			<NumberInput
 				placeholder='Celular'
-				className='main__content__right-section__login-form__phone-input'
+				className='phone-input'
 			/>
 			<Checkbox
 				label='Acepto la Política de Privacidad'
-				className='main__content__right-section__login-form__privacy-checkbox'
+				className='privacy-checkbox'
 			/>
 			<Checkbox
 				label='Acepto la Política Comunicaciones Comerciales'
-				className='main__content__right-section__login-form__commercial-checkbox'
+				className='commercial-checkbox'
 			/>
 			<Link
 				to='#'
-				className='main__content__right-section__login-form__terms-link'
+				className='terms-link'
 			>
 				<Text
 					span
@@ -41,14 +59,14 @@ const LoginForm = () => {
 				</Text>
 			</Link>
 			<Button
-				className='main__content__right-section__login-form__quote-button main__content__right-section__login-form__quote-button--desktop'
+				className='quote-button quote-button--desktop'
 				onClick={quote}
 			>
 				Cotiza aquí
 			</Button>
 			<Button
 				size='md'
-				className='main__content__right-section__login-form__quote-button main__content__right-section__login-form__quote-button--mobile'
+				className='quote-button quote-button--mobile'
 				onClick={quote}
 			>
 				Cotiza aquí

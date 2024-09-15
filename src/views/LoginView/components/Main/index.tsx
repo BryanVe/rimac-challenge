@@ -11,15 +11,15 @@ const Main = () => (
 	<main className='main'>
 		<Sparkles />
 		<div className='main__content'>
-			<div className='main__content__landing-image main__content__landing-image--desktop'>
+			<div className='landing-image landing-image--desktop'>
 				<img
 					draggable={false}
 					alt={landingImageAlt}
 					src={rimacLanding}
 				/>
 			</div>
-			<div className='main__content__right-section'>
-				<div className='main__content__right-section__header'>
+			<div className='right-section'>
+				<div className='right-section__header'>
 					<div>
 						<PromotionBadge>Seguro Salud Flexible</PromotionBadge>
 						<Title
@@ -31,12 +31,12 @@ const Main = () => (
 								desktop: 40,
 								mobile: 36
 							}}
-							className='main__content__right-section__header__title'
+							className='right-section__header__title'
 						>
 							Creado para ti y tu familia
 						</Title>
 					</div>
-					<div className='main__content__landing-image main__content__landing-image--mobile'>
+					<div className='landing-image landing-image--mobile'>
 						<img
 							draggable={false}
 							alt={landingImageAlt}
@@ -46,14 +46,14 @@ const Main = () => (
 				</div>
 				<Divider
 					color='darkblue-300'
-					className='main__content__right-section__divider'
+					className='right-section__divider'
 				/>
 				<Text
 					size={14}
 					lh={20}
 					ls={0.2}
 					fw='semibold'
-					className='main__content__right-section__description'
+					className='right-section__description'
 				>
 					Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
 					asesoría. 100% online.

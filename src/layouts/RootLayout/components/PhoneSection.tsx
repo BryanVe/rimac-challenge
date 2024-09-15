@@ -1,24 +1,24 @@
 import { Icon, Text } from '~/components'
 
 const PhoneSection = () => (
-	<div className='root-layout__header__content__phone-section'>
+	<div className='phone-section'>
 		<Text
 			span
 			size={12}
 			lh={16}
 			ls={0.2}
 			fw='semibold'
-			className='root-layout__header__content__phone-section__message'
+			className='phone-section__message'
 		>
 			¡Compra por este medio!
 		</Text>
 		<a
-			className='root-layout__header__content__phone-section__number'
+			className='phone-section__number'
 			href='tel:+014116001'
 		>
 			<Icon
 				name='phone'
-				className='root-layout__header__content__phone-section__number__icon'
+				className='phone-section__number__icon'
 			/>
 			<Text
 				span

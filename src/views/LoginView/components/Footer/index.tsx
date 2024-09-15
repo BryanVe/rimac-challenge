@@ -1,6 +1,6 @@
-import { Divider, Text } from '~/components'
+import { Link } from 'react-router-dom'
 
-import { RimacLogo } from './components'
+import { Divider, Logo, Text } from '~/components'
 
 import './style.scss'
 
@@ -9,7 +9,16 @@ const currentYear = new Date().getFullYear()
 const Footer = () => (
 	<footer className='footer'>
 		<div className='footer__content'>
-			<RimacLogo />
+			<Link to='/'>
+				<Logo
+					name='rimacRegular'
+					className='rimac-logo rimac-logo--desktop'
+				/>
+				<Logo
+					name='rimacFlat'
+					className='rimac-logo rimac-logo--mobile'
+				/>
+			</Link>
 			<Divider
 				color='darkblue-700'
 				className='footer__content__divider'
