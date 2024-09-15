@@ -31,7 +31,7 @@ $disabled: (
 .button {
 	position: relative;
 	color: var(--white);
-	font-weight: var(--bold-weight);
+	font-weight: var(--bold);
 	letter-spacing: rem(0.4px);
 	border-radius: rem(40px);
 	transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);

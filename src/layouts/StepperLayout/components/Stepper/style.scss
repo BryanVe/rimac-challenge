@@ -26,7 +26,7 @@
 				display: grid;
 				font-size: rem(12px);
 				line-height: rem(16px);
-				font-weight: var(--bold-weight);
+				font-weight: var(--bold);
 				color: var(--darkblue-500);
 				border: rem(1px) solid var(--darkblue-500);
 				letter-spacing: rem(0.4px);
@@ -48,7 +48,7 @@
 				}
 
 				.stepper__step-label {
-					font-weight: var(--bold-weight);
+					font-weight: var(--bold);
 					color: var(--darkblue-800);
 				}
 			}
@@ -61,7 +61,7 @@
 
 		.stepper {
 			&__counter {
-				font-weight: var(--black-weight);
+				font-weight: var(--black);
 				text-transform: uppercase;
 				font-size: rem(10px);
 				line-height: rem(16px);

@@ -5,7 +5,7 @@
 	-webkit-tap-highlight-color: transparent;
 
 	@each $name, $value in $font-weights {
-		--#{$name}-weight: #{$value};
+		--#{$name}: #{$value};
 	}
 
 	@each $name, $value in $colors {

@@ -12,7 +12,7 @@
 
 	@each $name, $value in $font-weights {
 		&--#{$name}-weight {
-			font-weight: var(--#{$name}-weight);
+			font-weight: var(--#{$name});
 		}
 	}
 
