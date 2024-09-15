@@ -10,29 +10,29 @@
 		align-items: center;
 		gap: rem(12px);
 		cursor: pointer;
+
+		&__icon {
+			display: grid;
+			place-items: center;
+			width: rem(20px);
+			height: rem(20px);
+			border: rem(1px) solid var(--darkblue-950);
+			border-radius: rem(4px);
+		}
+
+		&__text {
+			font-size: rem(12px);
+			line-height: rem(20px);
+			letter-spacing: rem(0.1px);
+		}
 	}
 
-	&__icon {
-		display: grid;
-		place-items: center;
-		width: rem(20px);
-		height: rem(20px);
-		border: rem(1px) solid var(--darkblue-950);
-		border-radius: rem(4px);
-	}
-
-	&__text {
-		font-size: rem(12px);
-		line-height: rem(20px);
-		letter-spacing: rem(0.1px);
-	}
-
-	&:has(&__input:focus-visible) &__icon {
+	&:has(&__input:focus-visible) &__label__icon {
 		outline: rem(2px) solid var(--darkblue-900);
 		outline-offset: rem(1px);
 	}
 
-	&__input:checked + .checkbox__label .checkbox__icon {
+	&__input:checked + .checkbox__label .checkbox__label__icon {
 		background-color: var(--darkblue-950);
 		border-color: var(--darkblue-950);
 	}
@@ -48,7 +48,7 @@
 				color: var(--danger);
 			}
 
-			& + .checkbox__label .checkbox__icon {
+			& + .checkbox__label .checkbox__label__icon {
 				background-color: var(--danger);
 				border-color: var(--danger);
 			}

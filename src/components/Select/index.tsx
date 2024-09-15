@@ -12,11 +12,10 @@ type SelectOption = {
 export interface SelectProps
 	extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	disabled?: boolean
-	error?: React.ReactNode
 	options?: SelectOption[]
 }
 
-const Select = ({ className, error, options, ...restProps }: SelectProps) => {
+const Select = ({ className, options, ...restProps }: SelectProps) => {
 	const _className = clsx('select', className)
 
 	return (
@@ -26,7 +25,7 @@ const Select = ({ className, error, options, ...restProps }: SelectProps) => {
 				className='select__icon'
 			/>
 			<select
-				className='select__wrapper'
+				className='select__field'
 				{...restProps}
 			>
 				{options?.map(({ value, label }) => (
@@ -38,7 +37,6 @@ const Select = ({ className, error, options, ...restProps }: SelectProps) => {
 					</option>
 				))}
 			</select>
-			{error && <div className='select__error'>* {error}</div>}
 		</div>
 	)
 }

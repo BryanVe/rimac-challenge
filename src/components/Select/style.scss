@@ -1,18 +1,13 @@
 $input-color: var(--darkblue-600);
 
-@mixin border($pxWidth, $color) {
-	border: rem($pxWidth) solid $color;
-}
-
 .select {
-	@include border(1px, $input-color);
-	border-radius: rem(8px);
+	width: 100%;
 	position: relative;
-	box-sizing: border-box;
 
 	&__icon {
-		width: rem(20px);
-		height: rem(20px);
+		$icon-size: rem(20px);
+		width: $icon-size;
+		height: $icon-size;
 		position: absolute;
 		right: rem(16px);
 		top: 50%;
@@ -20,31 +15,17 @@ $input-color: var(--darkblue-600);
 		pointer-events: none;
 	}
 
-	&__wrapper {
+	&__field {
 		width: 100%;
 		padding: rem(14px);
 		padding-inline-end: rem(36px);
 		font-size: rem(16px);
 		line-height: rem(26px);
 		transition: all 0.1s ease;
+		box-sizing: border-box;
+		border-radius: rem(8px);
+		border: rem(1px) solid $input-color;
 		cursor: pointer;
-	}
-
-	&:has(&__error) {
-		.number-input__field {
-			@include border(2px, var(--danger));
-		}
-
-		.number-input__placeholder {
-			color: var(--danger);
-		}
-
-		.number-input__error {
-			margin-top: rem(8px);
-			font-size: rem(13px);
-			color: var(--danger);
-			font-weight: var(--medium);
-		}
 	}
 
 	&:has(&__field:disabled) {

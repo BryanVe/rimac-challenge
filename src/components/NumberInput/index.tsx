@@ -20,11 +20,13 @@ const NumberInput = ({
 		<div className={_className}>
 			<div className='number-input__wrapper'>
 				{placeholder && (
-					<label className='number-input__placeholder'>{placeholder}</label>
+					<label className='number-input__wrapper__placeholder'>
+						{placeholder}
+					</label>
 				)}
 				<input
 					type='number'
-					className='number-input__field'
+					className='number-input__wrapper__field'
 					placeholder={placeholder}
 					{...restProps}
 				/>

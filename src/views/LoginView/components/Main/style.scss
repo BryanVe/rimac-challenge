@@ -67,17 +67,19 @@
 					display: flex;
 
 					&__select {
-						flex: 1;
 						max-width: rem(140px);
-						border-top-right-radius: 0;
-						border-bottom-right-radius: 0;
-						border-right-width: 0;
+
+						.select__field {
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+							border-right-width: 0;
+						}
 					}
 
 					&__number-input {
 						flex: 1;
 
-						.number-input__field {
+						.number-input__wrapper__field {
 							border-top-left-radius: 0;
 							border-bottom-left-radius: 0;
 						}

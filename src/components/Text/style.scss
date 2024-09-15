@@ -3,12 +3,6 @@
 	letter-spacing: var(--desktop-ls);
 	line-height: var(--desktop-lh);
 
-	@include respond-to('mobile') {
-		font-size: var(--mobile-size);
-		letter-spacing: var(--mobile-ls);
-		line-height: var(--mobile-lh);
-	}
-
 	@each $name, $value in $font-weights {
 		&--#{$name}-weight {
 			font-weight: var(--#{$name});
@@ -19,5 +13,11 @@
 		&--#{$name}-color {
 			color: var(--#{$name});
 		}
+	}
+
+	@include respond-to('mobile') {
+		font-size: var(--mobile-size);
+		letter-spacing: var(--mobile-ls);
+		line-height: var(--mobile-lh);
 	}
 }

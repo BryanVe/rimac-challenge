@@ -35,10 +35,10 @@ const Checkbox = ({
 				htmlFor={_id}
 				className='checkbox__label'
 			>
-				<span className='checkbox__icon'>
+				<span className='checkbox__label__icon'>
 					<Icon name='check' />
 				</span>
-				{label && <span className='checkbox__text'>{label}</span>}
+				{label && <span className='checkbox__label__text'>{label}</span>}
 			</label>
 			{error && <div className='checkbox__error'>* {error}</div>}
 		</div>
