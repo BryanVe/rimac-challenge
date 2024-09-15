@@ -1,6 +1,8 @@
 import CaretCircleLeft from './CaretCircleLeft'
 import CaretDown from './CaretDown'
 import Check from './Check'
+import Home from './Home'
+import Hospital from './Hospital'
 import Phone from './Phone'
 import ProtectMyself from './ProtectMyself'
 import ProtectSomeone from './ProtectSomeone'
@@ -13,5 +15,7 @@ export const icons = {
 	caretCircleLeft: CaretCircleLeft,
 	protectSomeone: ProtectSomeone,
 	protectMyself: ProtectMyself,
-	users: Users
+	users: Users,
+	home: Home,
+	hospital: Hospital
 } as const

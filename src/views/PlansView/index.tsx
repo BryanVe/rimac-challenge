@@ -4,6 +4,8 @@ import clsx from 'clsx'
 
 import { Card, Icon, Text, Title } from '~/components'
 
+import { PriceCards } from './components'
+
 import './style.scss'
 
 const quoteTypes = [
@@ -90,6 +92,7 @@ const PlansView = () => {
 									lh={28}
 									ls={-0.2}
 									className='plans-view__quote-type__title'
+									fw='black'
 								>
 									{quoteType.title}
 								</Title>
@@ -105,6 +108,7 @@ const PlansView = () => {
 					)
 				})}
 			</div>
+			<PriceCards />
 		</div>
 	)
 }
