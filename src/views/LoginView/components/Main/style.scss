@@ -1,132 +1,137 @@
-.login-section {
-	position: relative;
+.main {
 	flex: 1;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding-block: rem($header-height);
-
-	@include respond-to('mobile') {
-		padding-bottom: rem(96px);
-	}
 
 	&__content {
 		@include container;
 		display: flex;
 		align-items: center;
 		gap: rem(128px);
-	}
 
-	&__landing-image {
-		overflow: hidden;
+		&__landing-image {
+			overflow: hidden;
 
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		&--desktop {
-			max-width: rem(480px);
-			border-radius: rem(24px);
-			@include mobile-hidden;
-		}
-
-		&--mobile {
-			max-width: rem(136px);
-			border-radius: rem(16px);
-			@include desktop-hidden;
-		}
-	}
-
-	&__form {
-		display: flex;
-		flex-direction: column;
-		min-width: 352px;
-		max-width: 352px;
-
-		@include respond-to('mobile') {
-			max-width: 100%;
-		}
-
-		&-header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: rem(12px);
-		}
-
-		&-title {
-			margin-top: rem(16px);
-		}
-
-		&-divider {
-			margin-block: rem(24px);
-			@include desktop-hidden;
-		}
-
-		&-description {
-			@include respond-to('desktop') {
-				margin-top: rem(8px);
+			img {
+				max-width: 100%;
+				height: auto;
 			}
-		}
-
-		&-phone-input {
-			margin-top: rem(16px);
-		}
-
-		&-privacy-checkbox {
-			display: inline-flex;
-			margin-top: rem(24px);
-		}
-
-		&-commercial-checkbox {
-			display: inline-flex;
-			margin-top: rem(12px);
-		}
-
-		&-terms-link {
-			display: inline-flex;
-			margin-top: rem(12px);
-
-			&:active {
-				opacity: 0.8;
-			}
-
-			.text {
-				text-decoration: underline;
-			}
-		}
-
-		&__quote-button {
-			margin-top: rem(24px);
 
 			&--desktop {
-				width: fit-content;
+				max-width: rem(480px);
+				border-radius: rem(24px);
 				@include mobile-hidden;
 			}
 
 			&--mobile {
+				max-width: rem(136px);
+				border-radius: rem(16px);
 				@include desktop-hidden;
+			}
+		}
+
+		&__right-section {
+			display: flex;
+			flex-direction: column;
+			min-width: 352px;
+			max-width: 352px;
+			gap: rem(24px);
+
+			&__header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: rem(12px);
+
+				&__title {
+					margin-top: rem(16px);
+				}
+			}
+
+			&__divider {
+				@include desktop-hidden;
+			}
+
+			&__description {
+				@include respond-to('desktop') {
+					margin-top: rem(-24px);
+					padding-top: rem(8px);
+				}
+			}
+
+			&__login-form {
+				display: flex;
+				flex-direction: column;
+
+				&__id-input {
+					display: flex;
+
+					&__select {
+						flex: 1;
+						max-width: rem(140px);
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+						border-right-width: 0;
+					}
+
+					&__number-input {
+						flex: 1;
+
+						.number-input__field {
+							border-top-left-radius: 0;
+							border-bottom-left-radius: 0;
+						}
+					}
+				}
+
+				&__phone-input {
+					margin-top: rem(16px);
+				}
+
+				&__privacy-checkbox {
+					width: fit-content;
+					margin-top: rem(24px);
+				}
+
+				&__commercial-checkbox {
+					width: fit-content;
+					margin-top: rem(12px);
+				}
+
+				&__terms-link {
+					width: fit-content;
+					margin-top: rem(12px);
+
+					&:active {
+						opacity: 0.8;
+					}
+
+					.text {
+						text-decoration: underline;
+					}
+				}
+
+				&__quote-button {
+					margin-top: rem(24px);
+
+					&--desktop {
+						width: fit-content;
+						@include mobile-hidden;
+					}
+
+					&--mobile {
+						@include desktop-hidden;
+					}
+				}
+			}
+
+			@include respond-to('mobile') {
+				max-width: 100%;
 			}
 		}
 	}
 
-	.tag-promo {
-		$gradient-from: #00f4e2;
-		$gradient-to: #00ff7f;
-		width: fit-content;
-		padding: rem(4px) rem(8px);
-		border-radius: rem(4px);
-		font-size: rem(14px);
-		font-weight: var(--bold-weight);
-		line-height: rem(16px);
-		letter-spacing: rem(0.4px);
-		background: linear-gradient(90deg, $gradient-from 0%, $gradient-to 100%);
-		color: var(--black-color);
-
-		@include respond-to('mobile') {
-			font-size: rem(12px);
-			padding-block: rem(2px);
-		}
+	@include respond-to('mobile') {
+		padding-bottom: rem(96px);
 	}
 }

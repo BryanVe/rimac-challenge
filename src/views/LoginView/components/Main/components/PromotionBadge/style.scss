@@ -1,0 +1,18 @@
+.promotion-badge {
+	$gradient-from: #00f4e2;
+	$gradient-to: #00ff7f;
+	width: fit-content;
+	padding: rem(4px) rem(8px);
+	border-radius: rem(4px);
+	font-size: rem(14px);
+	font-weight: var(--bold-weight);
+	line-height: rem(16px);
+	letter-spacing: rem(0.4px);
+	background: linear-gradient(90deg, $gradient-from 0%, $gradient-to 100%);
+	color: var(--black-color);
+
+	@include respond-to('mobile') {
+		font-size: rem(12px);
+		padding-block: rem(2px);
+	}
+}
