@@ -1,6 +1,3 @@
-export { default as rimacLogo } from './rimac_logo.png'
-export { default as rimacNegativeLogoDesktop } from './rimac_negative_logo_desktop.png'
-export { default as rimacNegativeLogoMobile } from './rimac_negative_logo_mobile.png'
 export { default as leftSparkleDesktop } from './left_sparkle_desktop.png'
 export { default as rightSparkleDesktop } from './right_sparkle_desktop.png'
 export { default as leftSparkleMobile } from './left_sparkle_mobile.png'

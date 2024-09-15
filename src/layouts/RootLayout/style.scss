@@ -1,52 +1,56 @@
-.container {
+$logo-color: #f7052d;
+
+.root-layout {
 	display: flex;
 	flex-direction: column;
 	min-height: 100dvh;
-}
 
-.header {
-	position: absolute;
-	inset: 0 0 auto 0;
-	z-index: 1000;
+	&__header {
+		position: absolute;
+		inset: 0 0 auto 0;
+		z-index: 1000;
 
-	&__content {
-		@include container;
-		height: rem($header-height);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	&__logo {
-		user-select: none;
-		height: rem(36px);
-
-		@include respond-to('mobile') {
-			height: rem(32px);
-		}
-	}
-
-	&__phone {
-		display: flex;
-		gap: rem(16px);
-		align-items: center;
-
-		&-message {
-			@include mobile-hidden;
-		}
-
-		&-icon {
-			width: rem(20px);
-			height: rem(20px);
-		}
-
-		&-number {
+		&__content {
+			height: rem($header-height);
 			display: flex;
-			gap: rem(8px);
+			justify-content: space-between;
 			align-items: center;
+			@include container;
 
-			&:hover > span {
-				text-decoration: underline;
+			&__rimac-logo {
+				color: $logo-color;
+				height: rem(36px);
+
+				@include respond-to('mobile') {
+					height: rem(32px);
+				}
+			}
+
+			&__phone-section {
+				display: flex;
+				align-items: center;
+				gap: rem(16px);
+
+				&__message {
+					@include mobile-hidden;
+				}
+
+				&__number {
+					color: var(--darkblue-900);
+					display: flex;
+					align-items: center;
+					gap: rem(8px);
+
+					&__icon {
+						$icon-size: rem(20px);
+						width: $icon-size;
+						height: $icon-size;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}

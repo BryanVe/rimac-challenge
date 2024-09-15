@@ -8,22 +8,27 @@
 		justify-content: space-between;
 		align-items: center;
 
+		&__rimac-logo {
+			color: var(--white);
+
+			&--desktop {
+				height: rem(42px);
+				@include mobile-hidden;
+			}
+
+			&--mobile {
+				height: rem(20px);
+				@include desktop-hidden;
+			}
+		}
+
+		&__divider {
+			margin: rem(24px) 0;
+			@include desktop-hidden;
+		}
+
 		@include respond-to('mobile') {
 			flex-direction: column;
 		}
-	}
-
-	&__logo {
-		user-select: none;
-		height: rem(42px);
-
-		@include respond-to('mobile') {
-			height: rem(20px);
-		}
-	}
-
-	&__divider {
-		margin: rem(24px) 0;
-		@include desktop-hidden;
 	}
 }

@@ -1,40 +1,20 @@
-import { Link } from 'react-router-dom'
-
-import {
-	rimacNegativeLogoDesktop,
-	rimacNegativeLogoMobile
-} from '~/assets/images'
 import { Divider, Text } from '~/components'
-import { mobileBreakpoint } from '~/theme/globals'
+
+import { RimacLogo } from './components'
 
 import './style.scss'
 
-const rimacLogoAlt = 'Logo de RIMAC Seguros'
 const currentYear = new Date().getFullYear()
 
 const Footer = () => (
 	<footer className='footer'>
 		<div className='footer__content'>
-			<Link to='/'>
-				<picture>
-					<source
-						media={`(width <= ${mobileBreakpoint}px)`}
-						srcSet={rimacNegativeLogoMobile}
-					/>
-					<img
-						draggable={false}
-						className='footer__logo'
-						alt={rimacLogoAlt}
-						src={rimacNegativeLogoDesktop}
-					/>
-				</picture>
-			</Link>
+			<RimacLogo />
 			<Divider
 				color='darkblue-700'
-				className='footer__divider'
+				className='footer__content__divider'
 			/>
 			<Text
-				span
 				color='white'
 				size={{
 					desktop: 14,
