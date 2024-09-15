@@ -12,6 +12,7 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				additionalData: `
+					@use 'sass:map';
 					@import "./src/theme/globals.scss";
 					@import "./src/theme/utils.scss";
 				`

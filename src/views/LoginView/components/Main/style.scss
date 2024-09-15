@@ -97,8 +97,17 @@
 			}
 		}
 
-		&-quote-button {
+		&__quote-button {
 			margin-top: rem(24px);
+
+			&--desktop {
+				width: fit-content;
+				@include mobile-hidden;
+			}
+
+			&--mobile {
+				@include desktop-hidden;
+			}
 		}
 	}
 

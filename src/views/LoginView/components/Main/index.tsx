@@ -102,7 +102,14 @@ const Main = () => {
 						</Text>
 					</Link>
 					<Button
-						className='login-section__form-quote-button'
+						className='login-section__form__quote-button login-section__form__quote-button--desktop'
+						onClick={quote}
+					>
+						Cotiza aquí
+					</Button>
+					<Button
+						size='md'
+						className='login-section__form__quote-button login-section__form__quote-button--mobile'
 						onClick={quote}
 					>
 						Cotiza aquí
