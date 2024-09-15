@@ -1,0 +1,23 @@
+.plan-price-card {
+	min-width: rem(288px);
+	box-sizing: border-box;
+	padding-inline: rem(32px);
+	padding-block: rem(68px) rem(48px);
+	display: flex;
+	flex-direction: column;
+
+	&__divider {
+		margin-block: rem(24px);
+	}
+
+	&__select-button {
+		margin-top: rem(24px);
+		width: 100%;
+	}
+
+	&--recommended {
+		.card-header__recommended-badge {
+			display: block;
+		}
+	}
+}

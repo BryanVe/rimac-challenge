@@ -1,0 +1,42 @@
+$badge-bg-color: #7df0ba;
+
+.card-header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: rem(16px);
+
+	&__recommended-badge {
+		display: none;
+		position: absolute;
+		transform: translateY(calc(-100% - rem(8px)));
+		width: fit-content;
+		font-size: rem(12px);
+		line-height: rem(16px);
+		letter-spacing: rem(0.4px);
+		font-weight: var(--bold);
+		background-color: $badge-bg-color;
+		padding: rem(2px) rem(8px);
+		border-radius: rem(6px);
+	}
+
+	&__general-info {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24px);
+
+		.price-info {
+			display: flex;
+			flex-direction: column;
+			gap: rem(4px);
+		}
+	}
+
+	&__icon {
+		$icon-size: rem(56px);
+		min-width: $icon-size;
+		max-width: $icon-size;
+		min-height: $icon-size;
+		max-height: $icon-size;
+	}
+}

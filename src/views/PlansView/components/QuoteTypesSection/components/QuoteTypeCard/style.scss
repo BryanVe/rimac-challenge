@@ -1,0 +1,60 @@
+$success-color: #389e0d;
+
+.quote-type-card {
+	cursor: pointer;
+	box-sizing: border-box;
+	padding-inline: rem(24px);
+	padding-block: rem(16px) rem(40px);
+	max-width: rem(256px);
+	display: flex;
+	flex-direction: column;
+	gap: rem(8px);
+
+	&__radio {
+		$radio-size: rem(24px);
+		width: $radio-size;
+		height: $radio-size;
+		align-self: flex-end;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0 rem(1px) inset var(--darkblue-400);
+		display: grid;
+		place-items: center;
+		margin-bottom: rem(-8px);
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		gap: rem(8px);
+
+		&__icon {
+			$icon-size: rem(48px);
+			width: $icon-size;
+			height: $icon-size;
+
+			@include respond-to('mobile') {
+				$icon-size: rem(32px);
+				width: $icon-size;
+				height: $icon-size;
+			}
+		}
+
+		@include respond-to('mobile') {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&--selected {
+		box-shadow: 0px 0px 0 rem(3px) inset var(--darkblue-900);
+
+		.quote-type-card__radio {
+			box-shadow: none;
+			background-color: $success-color;
+		}
+	}
+
+	@include respond-to('mobile') {
+		max-width: 100%;
+	}
+}

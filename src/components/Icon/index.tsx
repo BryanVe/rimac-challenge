@@ -1,6 +1,6 @@
 import { icons } from './icons'
 
-type IconProps = SvgProps & {
+export type IconProps = SvgProps & {
 	name: keyof typeof icons
 }
 

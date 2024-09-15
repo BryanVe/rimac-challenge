@@ -1,5 +1,7 @@
 import { Text } from '~/components'
 
+import './style.scss'
+
 type CardContentProps = {
 	details: string[]
 	keywords?: string[]
@@ -25,7 +27,7 @@ const CardContent = ({ details, keywords }: CardContentProps) => {
 		: hightlightDetails(details, keywords)
 
 	return (
-		<div className='plans-view__price-cards__price-card__card-content'>
+		<div className='card-content'>
 			<ul>
 				{highlightedDetails.map((detail, detailIndex) => (
 					<li key={`${detail}-${detailIndex}`}>

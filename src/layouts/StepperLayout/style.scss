@@ -1,16 +1,15 @@
 .stepper-layout {
-	--violet: #4f4fff;
 	font-family: Lato, sans-serif;
 	padding-top: $header-height;
 
 	&__container {
-		width: 100%;
 		max-width: rem(928px);
+		padding-inline: rem(24px);
 		margin: 0 auto;
 	}
 
 	&__content {
-		padding: rem(40px) rem(24px);
+		padding-block: rem(40px);
 	}
 
 	&__back-button {

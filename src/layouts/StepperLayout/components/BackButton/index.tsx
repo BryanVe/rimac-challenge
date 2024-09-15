@@ -21,7 +21,7 @@ const BackButton = ({ className, previousPath }: BackButtonProps) => {
 			onClick={goToPreviousPath}
 		>
 			<Icon
-				name='caretCircleLeft'
+				name='circleLeft'
 				className='back-button__icon'
 			/>
 			<span className='back-button__text'>Volver</span>

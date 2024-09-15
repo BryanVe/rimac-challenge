@@ -1,0 +1,14 @@
+.plan-prices-section {
+	display: flex;
+	gap: rem(32px);
+	padding-block: rem(20px);
+	padding-inline: rem(24px);
+	margin-inline: rem(-24px);
+	overflow: auto;
+
+	@include respond-to('mobile') {
+		gap: rem(16px);
+		padding-block: rem(40px) rem(36px);
+		padding-inline: rem(48px);
+	}
+}

@@ -1,1 +1,2 @@
-export { default as PriceCards } from './PriceCards'
+export { default as PlanPricesSection } from './PlanPricesSection'
+export { default as QuoteTypesSection } from './QuoteTypesSection'

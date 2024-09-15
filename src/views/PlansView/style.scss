@@ -1,191 +1,186 @@
-$success-color: #389e0d;
+// .plans-view {
+// 	$title-width: rem(544px);
+// 	$title-align: center;
 
-.plans-view {
-	$title-width: rem(544px);
-	$title-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+// 	&__title {
+// 		max-width: $title-width;
+// 		text-align: $title-align;
+// 	}
 
-	&__title {
-		max-width: $title-width;
-		text-align: $title-align;
-	}
+// 	&__description {
+// 		margin-top: rem(8px);
+// 		max-width: $title-width;
+// 		text-align: $title-align;
+// 	}
 
-	&__description {
-		margin-top: rem(8px);
-		max-width: $title-width;
-		text-align: $title-align;
-	}
+// 	&__quote-types {
+// 		display: flex;
+// 		gap: rem(32px);
+// 		margin-top: rem(32px);
 
-	&__quote-types {
-		display: flex;
-		gap: rem(32px);
-		margin-top: rem(32px);
+// 		@include respond-to('mobile') {
+// 			flex-direction: column;
+// 			gap: rem(24px);
+// 			width: 100%;
+// 		}
+// 	}
 
-		@include respond-to('mobile') {
-			flex-direction: column;
-			gap: rem(24px);
-			width: 100%;
-		}
-	}
+// 	&__quote-type {
+// 		cursor: pointer;
+// 		box-sizing: border-box;
+// 		padding-inline: rem(24px);
+// 		padding-block: rem(16px) rem(40px);
+// 		max-width: rem(256px);
+// 		display: flex;
+// 		flex-direction: column;
+// 		gap: rem(8px);
 
-	&__quote-type {
-		cursor: pointer;
-		box-sizing: border-box;
-		padding-inline: rem(24px);
-		padding-block: rem(16px) rem(40px);
-		max-width: rem(256px);
-		display: flex;
-		flex-direction: column;
-		gap: rem(8px);
+// 		&__radio {
+// 			$radio-size: rem(24px);
+// 			align-self: flex-end;
+// 			width: $radio-size;
+// 			height: $radio-size;
+// 			border-radius: 50%;
+// 			box-shadow: 0px 0px 0 rem(1px) inset var(--darkblue-400);
+// 			display: grid;
+// 			place-items: center;
+// 			margin-bottom: rem(-8px);
+// 		}
 
-		&__radio {
-			$radio-size: rem(24px);
-			align-self: flex-end;
-			width: $radio-size;
-			height: $radio-size;
-			border-radius: 50%;
-			box-shadow: 0px 0px 0 rem(1px) inset var(--darkblue-400);
-			display: grid;
-			place-items: center;
-			margin-bottom: rem(-8px);
-		}
+// 		&__header {
+// 			display: flex;
+// 			flex-direction: column;
+// 			gap: rem(8px);
 
-		&__header {
-			display: flex;
-			flex-direction: column;
-			gap: rem(8px);
+// 			@include respond-to('mobile') {
+// 				flex-direction: row;
+// 				align-items: center;
+// 			}
+// 		}
 
-			@include respond-to('mobile') {
-				flex-direction: row;
-				align-items: center;
-			}
-		}
+// 		&__icon {
+// 			$icon-size: rem(48px);
+// 			width: $icon-size;
+// 			height: $icon-size;
 
-		&__icon {
-			$icon-size: rem(48px);
-			width: $icon-size;
-			height: $icon-size;
+// 			@include respond-to('mobile') {
+// 				$icon-size: rem(32px);
+// 				width: $icon-size;
+// 				height: $icon-size;
+// 			}
+// 		}
 
-			@include respond-to('mobile') {
-				$icon-size: rem(32px);
-				width: $icon-size;
-				height: $icon-size;
-			}
-		}
+// 		&--selected {
+// 			box-shadow: 0px 0px 0 rem(3px) inset var(--darkblue-900);
 
-		&--selected {
-			box-shadow: 0px 0px 0 rem(3px) inset var(--darkblue-900);
+// 			.plans-view__quote-type__radio {
+// 				box-shadow: none;
+// 				background-color: $success-color;
+// 			}
+// 		}
 
-			.plans-view__quote-type__radio {
-				box-shadow: none;
-				background-color: $success-color;
-			}
-		}
+// 		@include respond-to('mobile') {
+// 			max-width: 100%;
+// 		}
+// 	}
 
-		@include respond-to('mobile') {
-			max-width: 100%;
-		}
-	}
+// 	&__price-cards {
+// 		margin-top: rem(20px);
+// 		display: flex;
+// 		gap: rem(32px);
 
-	&__price-cards {
-		margin-top: rem(20px);
-		display: flex;
-		gap: rem(32px);
+// 		&__price-card {
+// 			width: rem(288px);
+// 			box-sizing: border-box;
+// 			padding-inline: rem(32px);
+// 			padding-block: rem(68px) rem(48px);
 
-		&__price-card {
-			width: rem(288px);
-			box-sizing: border-box;
-			padding-inline: rem(32px);
-			padding-block: rem(68px) rem(48px);
+// 			&__card-header {
+// 				position: relative;
+// 				display: flex;
+// 				justify-content: space-between;
+// 				gap: rem(16px);
 
-			&__card-header {
-				position: relative;
-				display: flex;
-				justify-content: space-between;
-				gap: rem(16px);
+// 				&__recommended-badge {
+// 					display: none;
+// 					position: absolute;
+// 					transform: translateY(calc(-100% - rem(8px)));
+// 					width: fit-content;
+// 					$bg-color: #7df0ba;
+// 					font-size: rem(12px);
+// 					line-height: rem(16px);
+// 					letter-spacing: rem(0.4px);
+// 					font-weight: var(--bold);
+// 					background-color: $bg-color;
+// 					padding: rem(2px) rem(8px);
+// 					border-radius: rem(6px);
+// 				}
 
-				&__recommended-badge {
-					display: none;
-					position: absolute;
-					transform: translateY(calc(-100% - rem(8px)));
-					width: fit-content;
-					$bg-color: #7df0ba;
-					font-size: rem(12px);
-					line-height: rem(16px);
-					letter-spacing: rem(0.4px);
-					font-weight: var(--bold);
-					background-color: $bg-color;
-					padding: rem(2px) rem(8px);
-					border-radius: rem(6px);
-				}
+// 				&__general-info {
+// 					display: flex;
+// 					flex-direction: column;
+// 					gap: rem(24px);
 
-				&__general-info {
-					display: flex;
-					flex-direction: column;
-					gap: rem(24px);
+// 					&__price-info {
+// 						display: flex;
+// 						flex-direction: column;
+// 						gap: rem(4px);
+// 					}
+// 				}
 
-					&__price-info {
-						display: flex;
-						flex-direction: column;
-						gap: rem(4px);
-					}
-				}
+// 				&__icon {
+// 					$icon-size: rem(56px);
+// 					min-width: $icon-size;
+// 					max-width: $icon-size;
+// 					min-height: $icon-size;
+// 					max-height: $icon-size;
+// 				}
+// 			}
 
-				&__icon {
-					$icon-size: rem(56px);
-					min-width: $icon-size;
-					max-width: $icon-size;
-					min-height: $icon-size;
-					max-height: $icon-size;
-				}
-			}
+// 			&__card-divider {
+// 				margin-block: rem(24px);
+// 			}
 
-			&__card-divider {
-				margin-block: rem(24px);
-			}
+// 			&__card-content {
+// 				ul {
+// 					list-style-position: inside;
+// 					display: flex;
+// 					flex-direction: column;
+// 					gap: rem(24px);
 
-			&__card-content {
-				ul {
-					list-style-position: inside;
-					display: flex;
-					flex-direction: column;
-					gap: rem(24px);
+// 					li {
+// 						display: flex;
+// 						gap: rem(10px);
 
-					li {
-						display: flex;
-						gap: rem(10px);
+// 						.dot {
+// 							margin-top: rem(4px);
+// 						}
+// 					}
+// 				}
+// 			}
 
-						.dot {
-							margin-top: rem(4px);
-						}
-					}
-				}
-			}
+// 			&--recommended {
+// 				.plans-view__price-cards__price-card__card-header__recommended-badge {
+// 					display: block;
+// 				}
+// 			}
+// 		}
 
-			&--recommended {
-				.plans-view__price-cards__price-card__card-header__recommended-badge {
-					display: block;
-				}
-			}
-		}
+// 		@include respond-to('mobile') {
+// 			margin-top: rem(40px);
+// 		}
+// 	}
 
-		@include respond-to('mobile') {
-			margin-top: rem(40px);
-		}
-	}
+// 	@include respond-to('mobile') {
+// 		$title-align: left;
+// 		align-items: flex-start;
 
-	@include respond-to('mobile') {
-		$title-align: left;
-		align-items: flex-start;
+// 		&__title {
+// 			text-align: $title-align;
+// 		}
 
-		&__title {
-			text-align: $title-align;
-		}
-
-		&__description {
-			text-align: $title-align;
-		}
-	}
-}
+// 		&__description {
+// 			text-align: $title-align;
+// 		}
+// 	}
+// }

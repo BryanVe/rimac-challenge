@@ -2,6 +2,8 @@ import { cloneElement } from 'react'
 
 import { Text, Title } from '~/components'
 
+import './style.scss'
+
 type CardHeaderProps = {
 	icon: React.ReactElement
 	title: string
@@ -15,11 +17,9 @@ const CardHeader = ({ title, price, discount, icon }: CardHeaderProps) => {
 		: undefined
 
 	return (
-		<div className='plans-view__price-cards__price-card__card-header'>
-			<div className='plans-view__price-cards__price-card__card-header__recommended-badge'>
-				Plan recomendado
-			</div>
-			<div className='plans-view__price-cards__price-card__card-header__general-info'>
+		<div className='card-header'>
+			<div className='card-header__recommended-badge'>Plan recomendado</div>
+			<div className='card-header__general-info'>
 				<Title
 					order={4}
 					size={24}
@@ -29,7 +29,7 @@ const CardHeader = ({ title, price, discount, icon }: CardHeaderProps) => {
 				>
 					{title}
 				</Title>
-				<div className='plans-view__price-cards__price-card__card-header__general-info__price-info'>
+				<div className='price-info'>
 					<Text
 						size={12}
 						lh={16}
@@ -67,7 +67,7 @@ const CardHeader = ({ title, price, discount, icon }: CardHeaderProps) => {
 				</div>
 			</div>
 			{cloneElement(icon, {
-				className: 'plans-view__price-cards__price-card__card-header__icon'
+				className: 'card-header__icon'
 			})}
 		</div>
 	)

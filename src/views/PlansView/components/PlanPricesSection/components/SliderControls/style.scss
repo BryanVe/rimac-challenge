@@ -1,0 +1,27 @@
+$icon-size: rem(32px);
+
+.slider-controls {
+	margin-top: rem(32px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(16px);
+	font-size: rem(16px);
+	line-height: rem(24px);
+	letter-spacing: rem(0.2px);
+
+	@include desktop-hidden;
+
+	&__button {
+		color: var(--violet);
+
+		svg {
+			width: $icon-size;
+			height: $icon-size;
+		}
+
+		&:disabled {
+			color: var(--darkblue-400);
+		}
+	}
+}

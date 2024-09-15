@@ -1,0 +1,19 @@
+.card-content {
+	flex: 1;
+
+	ul {
+		list-style-position: inside;
+		display: flex;
+		flex-direction: column;
+		gap: rem(24px);
+
+		li {
+			display: flex;
+			gap: rem(10px);
+
+			.dot {
+				margin-top: rem(4px);
+			}
+		}
+	}
+}
