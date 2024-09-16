@@ -1,6 +1,10 @@
 import { Icon, Text, Title } from '~/components'
 
-const CardHeader = () => (
+type CardHeaderProps = {
+	fullName: string
+}
+
+const CardHeader = ({ fullName }: CardHeaderProps) => (
 	<div className='summary-view__breakdown-card__header'>
 		<Text
 			color='darkblue-800'
@@ -24,7 +28,7 @@ const CardHeader = () => (
 				lh={28}
 				ls={-0.2}
 			>
-				Rocio Miranda Díaz
+				{fullName}
 			</Title>
 		</div>
 	</div>

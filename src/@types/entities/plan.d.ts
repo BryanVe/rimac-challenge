@@ -5,6 +5,10 @@ type TPlan = {
 	description: string[]
 }
 
+type TPlanWithDiscount = TPlan & {
+	discount?: number
+}
+
 type TPlanList = {
 	list: TPlan[]
 }
