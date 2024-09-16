@@ -20,6 +20,13 @@ $success-color: #389e0d;
 		display: grid;
 		place-items: center;
 		margin-bottom: rem(-8px);
+		color: var(--white);
+
+		svg {
+			$svg-size: rem(12px);
+			width: $svg-size;
+			height: $svg-size;
+		}
 	}
 
 	&__header {

@@ -16,10 +16,23 @@ type PlanPriceCardProps = {
 	discount?: number
 	keywords?: string[]
 	isRecommended?: boolean
+	selectPlan: () => void
 }
 
 const PlanPriceCard = forwardRef<HTMLDivElement, PlanPriceCardProps>(
-	({ icon, title, price, details, discount, keywords, isRecommended }, ref) => {
+	(
+		{
+			icon,
+			title,
+			price,
+			details,
+			discount,
+			keywords,
+			isRecommended,
+			selectPlan
+		},
+		ref
+	) => {
 		return (
 			<Card
 				ref={ref}
@@ -46,6 +59,7 @@ const PlanPriceCard = forwardRef<HTMLDivElement, PlanPriceCardProps>(
 					size='sm'
 					color='red'
 					className='plan-price-card__select-button'
+					onClick={selectPlan}
 				>
 					Seleccionar
 				</Button>
