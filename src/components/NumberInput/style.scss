@@ -48,7 +48,7 @@ $input-color: var(--darkblue-600);
 
 	&:has(&__error) {
 		.number-input__wrapper__field {
-			@include withShadow(2px, var(--danger));
+			@include withShadow(1px, var(--danger));
 		}
 
 		.number-input__wrapper__placeholder {
@@ -57,7 +57,7 @@ $input-color: var(--darkblue-600);
 
 		.number-input__error {
 			margin-top: rem(8px);
-			font-size: rem(13px);
+			font-size: rem(12px);
 			color: var(--danger);
 			font-weight: var(--medium);
 		}

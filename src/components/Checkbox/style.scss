@@ -12,12 +12,21 @@
 		cursor: pointer;
 
 		&__icon {
+			$icon-size: rem(20px);
 			display: grid;
 			place-items: center;
-			width: rem(20px);
-			height: rem(20px);
+			width: $icon-size;
+			height: $icon-size;
 			border: rem(1px) solid var(--darkblue-950);
 			border-radius: rem(4px);
+			box-sizing: border-box;
+
+			svg {
+				$svg-size: rem(12px);
+				display: none;
+				width: $svg-size;
+				height: $svg-size;
+			}
 		}
 
 		&__text {
@@ -35,6 +44,11 @@
 	&__input:checked + .checkbox__label .checkbox__label__icon {
 		background-color: var(--darkblue-950);
 		border-color: var(--darkblue-950);
+		color: var(--white);
+
+		svg {
+			display: block;
+		}
 	}
 
 	&__input:disabled + .checkbox__label {
@@ -46,16 +60,17 @@
 		.checkbox__input {
 			& + .checkbox__label {
 				color: var(--danger);
+				font-weight: var(--medium);
 			}
 
 			& + .checkbox__label .checkbox__label__icon {
-				background-color: var(--danger);
+				color: var(--danger);
 				border-color: var(--danger);
 			}
 		}
 		.checkbox__error {
 			margin-top: rem(8px);
-			font-size: rem(13px);
+			font-size: rem(12px);
 			color: var(--danger);
 			font-weight: var(--medium);
 		}

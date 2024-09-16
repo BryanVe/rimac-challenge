@@ -1,4 +1,6 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Navigate, Outlet, useLocation } from 'react-router-dom'
+
+import { useAuth } from '~/hooks'
 
 import { Stepper } from './components'
 import BackButton from './components/BackButton'
@@ -17,10 +19,13 @@ const steps = [
 ]
 
 const StepperLayout = () => {
+	const { user } = useAuth()
 	const { pathname } = useLocation()
 	const currentStepIndex = steps.findIndex(step => step.path === pathname)
 	const isFirstStep = currentStepIndex === 0
 	const previousPath = isFirstStep ? '/' : steps[currentStepIndex - 1].path
+
+	if (!user) return <Navigate to='/' />
 
 	return (
 		<div className='stepper-layout'>

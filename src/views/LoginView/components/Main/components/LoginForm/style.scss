@@ -3,24 +3,59 @@
 	flex-direction: column;
 
 	.id-input {
-		display: flex;
+		&__wrapper {
+			display: flex;
 
-		&__select {
-			max-width: rem(140px);
+			&__select {
+				max-width: rem(140px);
 
-			.select__field {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-				border-right-width: 0;
+				.select__field {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					border-right-width: 0;
+				}
+			}
+
+			&__number-input {
+				flex: 1;
+
+				.number-input__wrapper__field {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
 			}
 		}
 
-		&__number-input {
-			flex: 1;
+		&__error {
+			margin-top: rem(8px);
+			font-size: rem(12px);
+			color: var(--danger);
+			font-weight: var(--medium);
+		}
 
-			.number-input__wrapper__field {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
+		&:has(.id-input__error) {
+			.id-input__wrapper {
+				&__select {
+					.select__icon {
+						color: var(--danger);
+					}
+
+					.select__field {
+						color: var(--danger);
+						box-sizing: border-box;
+						border-color: var(--danger);
+					}
+				}
+
+				&__number-input {
+					.number-input__wrapper__field {
+						box-shadow: 0 0 0 rem(1px) inset var(--danger);
+					}
+
+					.number-input__wrapper__placeholder {
+						color: var(--danger);
+					}
+				}
 			}
 		}
 	}

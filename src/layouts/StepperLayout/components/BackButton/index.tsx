@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 
 import { Icon } from '~/components'
+import { useAuth } from '~/hooks'
 
 import './style.scss'
 
@@ -12,8 +13,15 @@ type BackButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const BackButton = ({ className, previousPath }: BackButtonProps) => {
 	const navigate = useNavigate()
+	const { setUser } = useAuth()
 
-	const goToPreviousPath = () => navigate(previousPath)
+	const goToPreviousPath = () => {
+		if (previousPath === '/') {
+			sessionStorage.removeItem('user')
+			setUser(undefined)
+		}
+		navigate(previousPath)
+	}
 
 	return (
 		<button
