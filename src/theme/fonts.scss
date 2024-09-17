@@ -1,16 +1,31 @@
-$font-data:
-	'BRSonoma-Regular' 400 normal,
-	'BRSonoma-Medium' 500 normal,
-	'BRSonoma-SemiBold' 600 normal,
-	'BRSonoma-Bold' 700 normal,
-	'BRSonoma-Black' 800 normal;
+$br-sonoma-font-data:
+	'BRSonoma-Regular' 400,
+	'BRSonoma-Medium' 500,
+	'BRSonoma-SemiBold' 600,
+	'BRSonoma-Bold' 700,
+	'BRSonoma-Black' 800;
 
-@each $variant, $weight, $style in $font-data {
+@each $variant, $weight in $br-sonoma-font-data {
 	@font-face {
 		font-family: 'BRSonoma';
 		src: url('./assets/fonts/#{$variant}.otf');
 		font-weight: $weight;
-		font-style: $style;
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+$lato-font-data:
+	'Lato-Regular' 400,
+	'Lato-Bold' 700,
+	'Lato-Black' 800;
+
+@each $variant, $weight in $lato-font-data {
+	@font-face {
+		font-family: 'Lato';
+		src: url('./assets/fonts/#{$variant}.ttf');
+		font-weight: $weight;
+		font-style: normal;
 		font-display: swap;
 	}
 }
