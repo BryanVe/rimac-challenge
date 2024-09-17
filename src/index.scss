@@ -1,7 +1,7 @@
 @import './theme/fonts.scss';
 
 :root {
-	font-family: 'BRSonoma', sans-serif;
+	font-family: 'BRSonoma', 'Roboto', Arial, sans-serif;
 	-webkit-tap-highlight-color: transparent;
 
 	@each $name, $value in $font-weights {
