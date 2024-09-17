@@ -61,7 +61,7 @@ const PlanPriceCard = forwardRef<HTMLDivElement, PlanPriceCardProps>(
 					className='plan-price-card__select-button'
 					onClick={selectPlan}
 				>
-					Seleccionar
+					Seleccionar Plan
 				</Button>
 			</Card>
 		)
