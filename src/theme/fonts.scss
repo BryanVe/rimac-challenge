@@ -1,20 +1,9 @@
 $font-data:
-	'BRSonoma-Thin' 100 normal,
-	'BRSonoma-ThinItalic' 100 italic,
-	'BRSonoma-ExtraLight' 200 normal,
-	'BRSonoma-ExtraLightItalic' 200 italic,
-	'BRSonoma-Light' 300 normal,
-	'BRSonoma-LightItalic' 300 italic,
 	'BRSonoma-Regular' 400 normal,
-	'BRSonoma-RegularItalic' 400 italic,
 	'BRSonoma-Medium' 500 normal,
-	'BRSonoma-MediumItalic' 500 italic,
 	'BRSonoma-SemiBold' 600 normal,
-	'BRSonoma-SemiBoldItalic' 600 italic,
 	'BRSonoma-Bold' 700 normal,
-	'BRSonoma-BoldItalic' 700 italic,
-	'BRSonoma-Black' 800 normal,
-	'BRSonoma-BlackItalic' 800 italic;
+	'BRSonoma-Black' 800 normal;
 
 @each $variant, $weight, $style in $font-data {
 	@font-face {
