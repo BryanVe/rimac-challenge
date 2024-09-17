@@ -29,13 +29,14 @@ const LoginForm = () => {
 						name='idNumber'
 						value={formValues.idNumber}
 						onChange={handleFormValueChange}
+						error={Boolean(formErrors?.idType || formErrors?.idNumber)}
 					/>
 				</div>
 				{formErrors?.idType && (
-					<div className='id-input__error'>* {formErrors.idType}</div>
+					<div className='id-input__error'>{formErrors.idType}</div>
 				)}
 				{formErrors?.idNumber && (
-					<div className='id-input__error'>* {formErrors.idNumber}</div>
+					<div className='id-input__error'>{formErrors.idNumber}</div>
 				)}
 			</div>
 			<NumberInput

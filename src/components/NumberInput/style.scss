@@ -18,24 +18,24 @@ $input-color: var(--darkblue-600);
 			position: absolute;
 			pointer-events: none;
 			color: $input-color;
-			transition: all 0.1s ease;
+			transition: all 0.15s ease;
 		}
 
 		&__field {
-			@include withShadow(1px, $input-color);
-			padding-block: rem(24px) rem(8px);
+			padding-block: rem(22px) rem(8px);
 			padding-inline: rem(16px);
 			border-radius: rem(8px);
 			font-size: rem(16px);
 			line-height: rem(24px);
 			transition: all 0.1s ease;
+			border: 1px solid $input-color;
 
 			&::placeholder {
 				visibility: hidden;
 			}
 
 			&:focus-visible {
-				@include withShadow(2px, $input-color);
+				@include withShadow(1px, $input-color);
 			}
 		}
 	}
@@ -48,6 +48,7 @@ $input-color: var(--darkblue-600);
 
 	&:has(&__error) {
 		.number-input__wrapper__field {
+			border-color: var(--danger);
 			@include withShadow(1px, var(--danger));
 		}
 
@@ -60,6 +61,10 @@ $input-color: var(--darkblue-600);
 			font-size: rem(12px);
 			color: var(--danger);
 			font-weight: var(--medium);
+		}
+
+		.number-input__error:empty {
+			display: none;
 		}
 	}
 

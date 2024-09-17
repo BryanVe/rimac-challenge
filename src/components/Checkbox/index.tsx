@@ -40,7 +40,7 @@ const Checkbox = ({
 				</span>
 				{label && <span className='checkbox__label__text'>{label}</span>}
 			</label>
-			{error && <div className='checkbox__error'>* {error}</div>}
+			{error && <div className='checkbox__error'>{error}</div>}
 		</div>
 	)
 }

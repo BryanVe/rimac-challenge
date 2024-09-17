@@ -31,7 +31,7 @@ const NumberInput = ({
 					{...restProps}
 				/>
 			</div>
-			{error && <div className='number-input__error'>* {error}</div>}
+			{error && <div className='number-input__error'>{error}</div>}
 		</div>
 	)
 }

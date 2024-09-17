@@ -46,16 +46,6 @@
 						border-color: var(--danger);
 					}
 				}
-
-				&__number-input {
-					.number-input__wrapper__field {
-						box-shadow: 0 0 0 rem(1px) inset var(--danger);
-					}
-
-					.number-input__wrapper__placeholder {
-						color: var(--danger);
-					}
-				}
 			}
 		}
 	}
