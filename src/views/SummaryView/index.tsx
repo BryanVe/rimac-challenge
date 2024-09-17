@@ -33,7 +33,7 @@ const SummaryView = () => {
 			>
 				Resumen del seguro
 			</Title>
-			<Card className='summary-view__breakdown-card'>
+			<Card className='breakdown-card'>
 				<CardHeader fullName={fullName} />
 				<Divider color='darkblue-200' />
 				<CardSection

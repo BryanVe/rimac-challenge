@@ -6,7 +6,7 @@ type CardSectionProps = {
 }
 
 const CardSection = ({ data, title }: CardSectionProps) => (
-	<div className='summary-view__breakdown-card__info-section'>
+	<div className='breakdown-card__info-section'>
 		<Text
 			size={16}
 			lh={24}

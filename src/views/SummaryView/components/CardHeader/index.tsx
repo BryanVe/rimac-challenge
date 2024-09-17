@@ -5,21 +5,21 @@ type CardHeaderProps = {
 }
 
 const CardHeader = ({ fullName }: CardHeaderProps) => (
-	<div className='summary-view__breakdown-card__header'>
+	<div className='breakdown-card__header'>
 		<Text
 			color='darkblue-800'
 			size={10}
 			lh={16}
 			ls={0.8}
 			fw='bold'
-			className='summary-view__breakdown-card__header__title'
+			className='breakdown-card__header__title'
 		>
 			Precios calculados para:
 		</Text>
-		<div className='summary-view__breakdown-card__header__user-data'>
+		<div className='user-data'>
 			<Icon
 				name='users'
-				className='summary-view__breakdown-card__header__user-data__icon'
+				className='user-data__icon'
 			/>
 			<Title
 				color='darkblue-800'
