@@ -25,6 +25,12 @@ const validMockedFormValues = [
 	}
 ]
 
+const lengths = {
+	phone: 9,
+	dni: 8,
+	ruc: 11
+} as const
+
 type TFormErrors = Partial<Record<keyof TUserCredentials, string>>
 
 const initialFormValues: TUserCredentials = {
@@ -73,7 +79,10 @@ export const useLogin = () => {
 			}
 		}
 
-		resetFormError(name)
+		if (name === 'idType' || name === 'idNumber') {
+			resetFormError('idType')
+			resetFormError('idNumber')
+		} else resetFormError(name)
 		setFormValues({
 			...formValues,
 			...newFormValues
@@ -90,15 +99,20 @@ export const useLogin = () => {
 				...errors,
 				idType: 'Debe ingresar un número de documento válido'
 			}
-		if (idNumber.length === 0)
+		if (idType === 'dni' && idNumber.length !== lengths.dni)
 			errors = {
 				...errors,
-				idNumber: 'Debe ingresar un número de documento válido'
+				idNumber: `El DNI debe tener ${lengths.dni} dígitos`
 			}
-		if (phone.length === 0)
+		if (idType === 'ruc' && idNumber.length !== lengths.ruc)
 			errors = {
 				...errors,
-				phone: 'Debe ingresar un celular válido'
+				idNumber: `El RUC debe tener ${lengths.ruc} dígitos`
+			}
+		if (phone.length !== lengths.phone)
+			errors = {
+				...errors,
+				phone: `El celular debe tener ${lengths.phone} dígitos`
 			}
 		if (!isPrivacyAccepted)
 			errors = {
