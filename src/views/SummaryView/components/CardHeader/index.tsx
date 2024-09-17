@@ -23,7 +23,7 @@ const CardHeader = ({ fullName }: CardHeaderProps) => (
 			/>
 			<Title
 				color='darkblue-800'
-				order={6}
+				order={3}
 				size={20}
 				lh={28}
 				ls={-0.2}
