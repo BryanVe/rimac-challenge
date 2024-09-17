@@ -20,6 +20,7 @@ const SummaryView = () => {
 	return (
 		<div className='summary-view'>
 			<Title
+				order={2}
 				color='darkblue-800'
 				size={{
 					desktop: 40,
