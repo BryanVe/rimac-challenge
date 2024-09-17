@@ -35,7 +35,7 @@ const CardHeader = ({ title, price, discount, icon }: CardHeaderProps) => {
 						lh={16}
 						ls={0.6}
 						color='darkblue-500'
-						fw='black'
+						fw='bold'
 						style={{
 							textTransform: 'uppercase' // TODO: create prop for this
 						}}
