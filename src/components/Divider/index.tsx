@@ -7,11 +7,7 @@ export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Divider = ({ color, className, ...restProps }: DividerProps) => {
-	const _className = clsx(
-		'divider',
-		color && `divider--${color}-color`,
-		className
-	)
+	const _className = clsx('divider', color && `divider--${color}`, className)
 
 	return (
 		<div

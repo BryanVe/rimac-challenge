@@ -45,8 +45,8 @@ const Text = ({
 	} satisfies StyleProp
 	const _className = clsx(
 		'text',
-		fw && `text--${fw}-weight`,
-		color && `text--${color}-color`,
+		fw && `text--${fw}`,
+		color && `text--${color}`,
 		className
 	)
 

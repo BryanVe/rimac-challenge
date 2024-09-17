@@ -5,13 +5,13 @@
 	line-height: var(--desktop-lh);
 
 	@each $name, $value in $font-weights {
-		&--#{$name}-weight {
+		&--#{$name} {
 			font-weight: var(--#{$name});
 		}
 	}
 
 	@each $name, $value in $colors {
-		&--#{$name}-color {
+		&--#{$name} {
 			color: var(--#{$name});
 		}
 	}

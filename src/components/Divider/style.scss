@@ -3,7 +3,7 @@
 	width: 100%;
 
 	@each $name, $value in $colors {
-		&--#{$name}-color {
+		&--#{$name} {
 			border-top-color: var(--#{$name});
 		}
 	}

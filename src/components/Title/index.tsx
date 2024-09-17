@@ -36,8 +36,8 @@ const Title = ({
 	} satisfies StyleProp
 	const _className = clsx(
 		'title',
-		fw && `title--${fw}-weight`,
-		color && `title--${color}-color`,
+		fw && `title--${fw}`,
+		color && `title--${color}`,
 		className
 	)
 
