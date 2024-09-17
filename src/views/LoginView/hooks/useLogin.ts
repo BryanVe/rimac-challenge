@@ -26,7 +26,7 @@ const validMockedFormValues = [
 ]
 
 const lengths = {
-	phone: 9,
+	phone: 10,
 	dni: 8,
 	ruc: 11
 } as const
@@ -47,7 +47,7 @@ export const useLogin = () => {
 	const [formErrors, setFormErrors] = useState<TFormErrors>({})
 	const [formValues, setFormValues] =
 		useState<TUserCredentials>(initialFormValues)
-	const { refetch: getProfile } = useQuery({
+	const { refetch: getProfile, isFetching: isLoadingProfile } = useQuery({
 		queryKey: ['getProfile'],
 		queryFn: async () => {
 			try {
@@ -171,6 +171,7 @@ export const useLogin = () => {
 		formErrors,
 		idTypes,
 		login,
-		handleFormValueChange
+		handleFormValueChange,
+		isLoadingProfile
 	}
 }
