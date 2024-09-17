@@ -30,7 +30,7 @@ export const usePlans = () => {
 
 	const userAge = user ? getAgeFromBirthDay(user.birthDay) : undefined
 	const filteredPlans =
-		userAge && plans ? plans.filter(plan => userAge < plan.age) : []
+		userAge && plans ? plans.filter(plan => userAge <= plan.age) : []
 
 	return {
 		selectedQuoteTypeId,
