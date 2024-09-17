@@ -1,6 +1,7 @@
 .main {
 	flex: 1;
-	display: flex;
+	display: grid;
+	grid-template-rows: 0 0 1fr;
 	position: relative;
 	padding-block: rem($header-height);
 
@@ -9,9 +10,13 @@
 		display: flex;
 		align-items: center;
 		gap: rem(128px);
+		width: 100%;
+		box-sizing: border-box;
 
 		.landing-image {
 			overflow: hidden;
+			width: 100%;
+			max-width: rem(480px);
 
 			img {
 				max-width: 100%;
@@ -62,6 +67,7 @@
 
 			@include respond-to('mobile') {
 				max-width: 100%;
+				width: 100%;
 			}
 		}
 	}
