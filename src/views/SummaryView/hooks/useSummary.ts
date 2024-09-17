@@ -1,11 +1,11 @@
+import { storage } from '~/utils/common'
+
 export const useSummary = () => {
-	const user = sessionStorage.getItem('user')
-	const selectedPlan = sessionStorage.getItem('selectedPlan')
+	const user = storage.getItem<TUser>('user')
+	const selectedPlan = storage.getItem<TPlanWithDiscount>('selectedPlan')
 
 	return {
-		user: user ? (JSON.parse(user) as TUser) : undefined,
-		selectedPlan: selectedPlan
-			? (JSON.parse(selectedPlan) as TPlanWithDiscount)
-			: undefined
+		user,
+		selectedPlan
 	}
 }

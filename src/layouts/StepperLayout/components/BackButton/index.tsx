@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import { Icon } from '~/components'
 import { useAuth } from '~/hooks'
+import { storage } from '~/utils/common'
 
 import './style.scss'
 
@@ -17,7 +18,7 @@ const BackButton = ({ className, previousPath }: BackButtonProps) => {
 
 	const goToPreviousPath = () => {
 		if (previousPath === '/') {
-			sessionStorage.removeItem('user')
+			storage.removeItem('user')
 			setUser(undefined)
 		}
 		navigate(previousPath)

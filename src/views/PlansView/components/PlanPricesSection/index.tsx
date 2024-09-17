@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { Icon } from '~/components'
+import { storage } from '~/utils/common'
 
 import { PlanPriceCard, SliderControls } from './components'
 
@@ -50,13 +51,10 @@ const PlanPricesSection = ({ plans, discount }: PlanPricesSectionProps) => {
 	}
 
 	const selectPlan = (plan: TPlan) => () => {
-		sessionStorage.setItem(
-			'selectedPlan',
-			JSON.stringify({
-				...plan,
-				discount
-			})
-		)
+		storage.setItem('selectedPlan', {
+			...plan,
+			discount
+		})
 		navigate('/summary')
 	}
 

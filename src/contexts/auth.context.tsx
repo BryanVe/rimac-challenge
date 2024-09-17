@@ -1,5 +1,7 @@
 import React, { createContext, useCallback, useState } from 'react'
 
+import { storage } from '~/utils/common'
+
 export type TAuthContext = {
 	user?: TUserProfile
 	setUser: React.Dispatch<React.SetStateAction<TUser | undefined>>
@@ -8,15 +10,13 @@ export type TAuthContext = {
 export const AuthContext = createContext<Partial<TAuthContext>>({})
 
 export const AuthProvider = ({ children }: React.PropsWithChildren) => {
-	const _user = sessionStorage.getItem('user')
-	const [user, _setUser] = useState<TUser | undefined>(
-		_user ? JSON.parse(_user) : undefined
-	)
+	const _user = storage.getItem<TUser>('user')
+	const [user, _setUser] = useState<TUser | undefined>(_user)
 
 	const setUser = useCallback<TAuthContext['setUser']>(
 		user => {
-			if (user) sessionStorage.setItem('user', JSON.stringify(user))
-			else sessionStorage.removeItem('user')
+			if (user) storage.setItem('user', user)
+			else storage.removeItem('user')
 			_setUser(user)
 		},
 		[user]
