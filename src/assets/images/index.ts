@@ -1,7 +1,0 @@
-export { default as leftSparkleDesktop } from './left_sparkle_desktop.webp'
-export { default as rightSparkleDesktop } from './right_sparkle_desktop.webp'
-export { default as leftSparkleMobile } from './left_sparkle_mobile.webp'
-export { default as rightSparkleMobile } from './right_sparkle_mobile.webp'
-export { default as rimacLanding } from './rimac_landing.webp'
-export { default as stepperConnectorActive } from './stepper_connector_active.webp'
-export { default as stepperConnectorInactive } from './stepper_connector_inactive.webp'

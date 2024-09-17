@@ -1,4 +1,4 @@
-import { rimacLanding } from '~/assets/images'
+import rimacLanding from '~/assets/images/rimac_landing.webp'
 import { Divider, Text, Title } from '~/components'
 
 import { LoginForm, PromotionBadge, Sparkles } from './components'

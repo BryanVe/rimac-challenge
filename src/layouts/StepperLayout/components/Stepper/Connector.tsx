@@ -1,7 +1,5 @@
-import {
-	stepperConnectorActive,
-	stepperConnectorInactive
-} from '~/assets/images'
+import stepperConnectorActive from '~/assets/images/stepper_connector_active.webp'
+import stepperConnectorInactive from '~/assets/images/stepper_connector_inactive.webp'
 import { mobileBreakpoint } from '~/theme/globals'
 
 type ConnectorProps = {

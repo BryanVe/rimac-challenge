@@ -1,9 +1,7 @@
-import {
-	leftSparkleDesktop,
-	leftSparkleMobile,
-	rightSparkleDesktop,
-	rightSparkleMobile
-} from '~/assets/images'
+import leftSparkleDesktop from '~/assets/images/left_sparkle_desktop.webp'
+import leftSparkleMobile from '~/assets/images/left_sparkle_mobile.webp'
+import rightSparkleDesktop from '~/assets/images/right_sparkle_desktop.webp'
+import rightSparkleMobile from '~/assets/images/right_sparkle_mobile.webp'
 import { mobileBreakpoint } from '~/theme/globals'
 
 import './style.scss'
